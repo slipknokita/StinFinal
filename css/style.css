@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+}
+
+body{
+    width: 100%;
+}
+
+
+.bg-000000{
+    background-color: #000000;
+}
+
+.background-prototype{
+    position: relative;
+}
+
+.b-landing{
+    background: url(../img/background1.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 1000px;
+}
+
+.b-detail{
+    background:linear-gradient(30deg,#08032be2,black);
+    color:white;
+    min-height: 3000px;
+}
+
+/*.b-detail{
+    position: relative;
+    background: url(../img/background-blue2.png);
+    background-position: center;
+    background-size: cover;
+    color:white;
+    min-height: 2000px;
+}*/
+
+.background-overlay{
+    position: absolute;
+    background-color: black;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.info{
+    height: 250px;
+    width: 1000px;
+}*/
+
+.img-container{
+    background-image: url(../img/heroimage1.png);
+    height: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 400px;
+}
+
+.inner-container{
+    text-align: start;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-landing{
+    display: inline-block;
+    font-weight: bold;
+    padding: 10px;
+    color: #fff;
+    border: 5px solid #fff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    font-size: 7;
+}
+
+.img-desc{
+    width: 100%;
+    border-radius: 0.2em;
+}
+
+.img-galery{
+    width: 100%;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    
+}
+
+.review{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+.embed-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*Footer*/
+.footer{
+    background-color: black;
+    display: flex ;
+    align-items: center ;
+    justify-content: space-around;
+}   
+.ls{
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+    cursor: pointer;
+}
+a:hover{
+    text-decoration: none;
+    color: #234BCE;
+}
+.links{ 
+  display: flex;
+  flex-direction: column;
+}
+
+/*.body-landing{
+    background-image: url(../img/background1.png);
+    
+}
+
+main{
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.7);
+    position: absolute;
+}*/

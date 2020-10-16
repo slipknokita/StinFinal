@@ -1,0 +1,74 @@
+a {
+    text-decoration: none;
+}
+.azulOscuro {
+    background:linear-gradient(#08032be2,black);
+}
+.violetaOscuro {
+    
+    background:linear-gradient(90deg, #1e2460, #38338F);
+}
+* {
+    color: #f8f9fa;
+}
+.btn {
+    background-color: #7040D4;
+}
+
+.btndelete{
+    background-color:  #5c0303
+}
+.btnedit{
+    background-color: #1e2460;
+}
+.btndestacado{
+    background-color: #92901c;
+}
+.cajas {
+    margin:10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+.btnSuccess {
+    background-color: #24993f;
+    border-radius: 7px;
+}
+input {
+    color: black;
+}
+option {
+    color:black;
+}
+select {
+    color: black;
+}
+
+caption{
+    caption-side: top;
+}
+
+table{
+   
+    border-collapse: collapse ;
+}
+
+th,td{
+    border: 1px solid black;
+    text-align: center;
+}
+
+h1,h2 {
+    text-align: center;
+}    
+
+.modal{
+    margin-left: 700px;
+    margin-right: 200px;
+    width: 700px;
+    height: 600px;
+}
+
+p{
+    margin-top: 2rem;
+}

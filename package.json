@@ -1,0 +1,11 @@
+{
+  "name": "stinfinal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "json-server --watch Games.json"
+  },
+  "author": "",
+  "license": "ISC"
+}

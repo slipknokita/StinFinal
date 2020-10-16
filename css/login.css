@@ -1,0 +1,34 @@
+a {
+    text-decoration: none;
+}
+.azulOscuro {
+    background:linear-gradient(30deg,#08032be2,black);
+}
+.violetaOscuro {
+    
+    background:linear-gradient(90deg, #1e2460, #38338F);
+}
+* {
+    color: #f8f9fa;
+}
+.btn {
+    background-color: #7040D4;
+}
+.cajas {
+    margin:10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+.btnSuccess {
+    background-color: #28a745;
+}
+input {
+    color: black;
+}
+option {
+    color:black;
+}
+select {
+    color: black;
+}

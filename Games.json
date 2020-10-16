@@ -1,0 +1,292 @@
+{
+  "Games": [
+    {
+      "id": 1,
+      "name": "Outlast",
+      "style": "singleplayer",
+      "category": "Terror",
+      "imgSource": "/img/T1.jpg",
+      "publicado": true,
+      "destacado": "si"
+    },
+    {
+      "id": 2,
+      "name": "Final Fantasy",
+      "style": "multiplayer",
+      "category": "Fantasy",
+      "imgSource": "/img/F1.jpg",
+      "publicado": true,
+      "destacado": "si"
+    },
+    {
+      "id": 3,
+      "name": "Call of Duty",
+      "style": "singleplayer",
+      "category": "Shooter",
+      "imgSource": "/img/S1.jpg",
+      "publicado": true,
+      "destacado": "no"
+    },
+    {
+      "id": 4,
+      "name": "Counter Strike",
+      "style": "multiplayer",
+      "category": "Accion",
+      "imgSource": "/img/A1.jpg",
+      "publicado": true,
+      "destacado": "no"
+    },
+    {
+      "id": 5,
+      "name": "Silent Hill",
+      "style": "singleplayer",
+      "category": "Terror",
+      "imgSource": "/img/T2.jpg",
+      "publicado": true,
+      "destacado": "si"
+    },
+    {
+      "id": 6,
+      "name": "The witcher",
+      "style": "multiplayer",
+      "category": "Fantasy",
+      "imgSource": "/img/F2.jpg",
+      "publicado": true,
+      "destacado": "si"
+    },
+    {
+      "id": 7,
+      "name": "Counter-Strike CS-GO",
+      "style": "multiplayer",
+      "category": "Shooter",
+      "imgSource": "/img/S2.jpg",
+      "publicado": true,
+      "destacado": "no"
+    },
+    {
+      "id": 8,
+      "name": "The Witcher 3",
+      "style": "multiplayer",
+      "category": "Accion",
+      "imgSource": "/img/A2.jpg",
+      "publicado": true,
+      "destacado": "no"
+    },
+    {
+      "id": 9,
+      "name": "Dead Space",
+      "style": "singleplayer",
+      "category": "Terror",
+      "imgSource": "/img/T3.jpg",
+      "publicado": true,
+      "destacado": "si"
+    },
+    {
+      "id": 10,
+      "name": "The Elder Scroll V: Skyrim",
+      "style": "multiplayer",
+      "category": "Fantasy",
+      "imgSource": "/img/F3.jpg",
+      "publicado": true,
+      "destacado": "si"
+    },
+    {
+      "id": 11,
+      "name": "Destiny 2",
+      "style": "singleplayer",
+      "category": "Shooter",
+      "imgSource": "/img/S3.jpg",
+      "publicado": true,
+      "destacado": "no"
+    },
+    {
+      "id": 12,
+      "name": "Dark Souls",
+      "style": "multiplayer",
+      "category": "Accion",
+      "imgSource": "/img/A3.jpg",
+      "publicado": true,
+      "destacado": "no"
+    },
+    {
+      "id": 13,
+      "name": "Resident Evil",
+      "style": "singleplayer",
+      "category": "Terror",
+      "imgSource": "/img/T4.jpg",
+      "publicado": true,
+      "destacado": "si"
+    },
+    {
+      "id": 14,
+      "name": "Dark Souls",
+      "style": "multiplayer",
+      "category": "Fantasy",
+      "imgSource": "/img/F4.jpg",
+      "publicado": true,
+      "destacado": "si"
+    },
+    {
+      "id": 15,
+      "name": "Battlefield",
+      "style": "singleplayer",
+      "category": "Shooter",
+      "imgSource": "/img/S4.jpg",
+      "publicado": true,
+      "destacado": "no"
+    },
+    {
+      "id": 16,
+      "name": "Doom Eternal",
+      "style": "multiplayer",
+      "category": "Accion",
+      "imgSource": "/img/A4.jpg",
+      "publicado": true,
+      "destacado": "no"
+    },
+    {
+      "id": 17,
+      "name": "Five nights",
+      "style": "singleplayer",
+      "category": "Terror",
+      "imgSource": "/img/T5.jpg",
+      "publicado": true,
+      "destacado": "si"
+    },
+    {
+      "id": 18,
+      "name": "Nier Automata",
+      "style": "multiplayer",
+      "category": "Fantasy",
+      "imgSource": "/img/F5.jpg",
+      "publicado": true,
+      "destacado": "si"
+    },
+    {
+      "id": 19,
+      "name": "Metro 2033",
+      "style": "singleplayer",
+      "category": "Shooter",
+      "imgSource": "/img/S5.jpg",
+      "publicado": true,
+      "destacado": "no"
+    },
+    {
+      "id": 20,
+      "name": "Nier Automata",
+      "style": "multiplayer",
+      "category": "Accion",
+      "imgSource": "/img/A5.jpg",
+      "publicado": true,
+      "destacado": "no"
+    },
+    {
+      "id": 21,
+      "name": "Visage",
+      "style": "singleplayer",
+      "category": "Terror",
+      "imgSource": "/img/T6.jpg",
+      "publicado": true,
+      "destacado": "si"
+    },
+    {
+      "id": 22,
+      "name": "Star Wars Jedi Fallen Order",
+      "style": "multiplayer",
+      "category": "Fantasy",
+      "imgSource": "/img/F6.jpg",
+      "publicado": true,
+      "destacado": "si"
+    },
+    {
+      "id": 23,
+      "name": "TitanFall 2",
+      "style": "multiplayer",
+      "category": "Shooter",
+      "imgSource": "/img/S6.jpg",
+      "publicado": true,
+      "destacado": "no"
+    },
+    {
+      "id": 24,
+      "name": "Sekiro: Shadows Die Twice",
+      "style": "multiplayer",
+      "category": "Accion",
+      "imgSource": "/img/A6.jpg",
+      "publicado": true,
+      "destacado": "no"
+    },
+    {
+      "id": 25,
+      "name": "Bioshock",
+      "style": "singleplayer",
+      "category": "Terror",
+      "imgSource": "/img/T7.jpg",
+      "publicado": true,
+      "destacado": "si"
+    },
+    {
+      "id": 26,
+      "name": "Bioshock",
+      "style": "multiplayer",
+      "category": "Fantasy",
+      "imgSource": "/img/F7.jpg",
+      "publicado": true,
+      "destacado": "si"
+    },
+    {
+      "id": 27,
+      "name": "Doom Eternal",
+      "style": "singleplayer",
+      "category": "Shooter",
+      "imgSource": "/img/S7.jpg",
+      "publicado": true,
+      "destacado": "no"
+    },
+    {
+      "id": 28,
+      "name": "SpiderMan: Miles Morales",
+      "style": "multiplayer",
+      "category": "Accion",
+      "imgSource": "/img/A7.jpg",
+      "publicado": true,
+      "destacado": "no"
+    },
+    {
+      "id": 29,
+      "name": "Ailon Isolation",
+      "style": "singleplayer",
+      "category": "Terror",
+      "imgSource": "/img/T8.jpg",
+      "publicado": true,
+      "destacado": "si"
+    },
+    {
+      "id": 30,
+      "name": "SpiderMan",
+      "style": "multiplayer",
+      "category": "Fantasy", 
+      "imgSource": "/img/F8.jpg",
+      "publicado": true,
+      "destacado": "si"
+    },
+    {
+      "id": 31,
+      "name": "Wolfenstein",
+      "style": "singleplayer",
+      "category": "Shooter",
+      "imgSource": "/img/S8.jpg",
+      "publicado": true,
+      "destacado": "no"
+    },
+    {
+      "id": 32,
+      "name": "Bloodborne",
+      "style": "multiplayer",
+      "category": "Accion",
+      "imgSource": "/img/A8.jpg",
+      "publicado": true,
+      "destacado": "no"
+    }
+  ]
+}

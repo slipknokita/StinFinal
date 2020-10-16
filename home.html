@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel</title>
+  <link rel="stylesheet" href="css/carousel.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/footer.css">
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/4e9df753cf.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body id="bodyGame" class="body b-detail">
+
+
+<!-- NAVBAR  -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-000000 pb-0">
+    <div class="container">
+      <a class="col-1 m-0 pr-0" href="landing.html">
+          <img style="width: 40px;" src="img/logoninja.png" alt="logo">
+      </a>
+      <h2 class="text-white">STIN</h2>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="landing.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutUs.html">Acerca de Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="home.html" > Biblioteca </a>             
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Cuenta
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="login.html">Iniciar Sesión</a>
+              <a class="dropdown-item" href="register.html">Registro</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+
+<!--BUSCADOR-->
+<div class="searchInputWrapper">
+    <div class="withinSearchInput">
+<input 
+        type="search" 
+        id="searchBar" 
+        class="inputSearch"
+        placeholder="Busca un juego"> </input>
+<button id="searchBtn" class="searchButton">Borrar búsqueda</button>
+</div>
+</div>
+<br>
+<div id = "gamesList" class = "row resultContainer justify-content-center"> </div>
+
+
+
+                                            <!--HERO IMAGE-->
+          
+          <div class="hero-img d-flex justify-content-center">
+              <img src="img/heroimg.png" class="col-xl-12 col-lg-12 col-md-9 col-sm-12 ">
+              <div class="text-heroimg d-none d-sm-none d-md-none d-lg-block">
+                <h2 >SPIDERMAN X</h2>
+                <h5 >SPIDERMAN X se viene a finales de 2020, desarollado por Pandemia.INC y de la mano de COVID-19 
+                    para todos los dispositivos. Ambientado en un mundo distopico de guerras y curas misteriosas deberas 
+                    encontrar el ADN recombinante para salvarte</h5>
+                </div>
+                <div class="btn-heroimgmain">
+                    <a class="btn-heroimg" href="error404.html">VER VIDEO</a>
+                </div>
+                
+          </div>
+
+                                            
+                                            <!--CAROUSEL-->
+     <!--Carousel title-->
+   <div class="carouselContainer">
+       <!--Carousel categories-->
+    <div class="classContainer">
+        <div id= "categoryTerror" class="category Terror">Terror</div>
+        <div id= "categoryFantasy" class="category Fantasy">Fantasy</div>
+        <div id= "categoryShooter"class="category Shooter">Shooter</div>
+        <div id= "categoryAccion" class="category Accion">Accion</div>
+    </div>
+</div>
+    <div id = "img-container" class = "carousel">
+    <img src="img/TerrorG.jpg" id="carousel-image" class="slider-img img-responsive" />
+
+           <!--Carousel buttons-->
+    <div class = "BTNS">
+<div id="Carousel" class="d-flex justify-content-between buttons2 btnsCarousel Carousel">
+    <button id="btn-prev2" class="btn2 prev2 btnS">&laquo; </button> 
+    <button id= "btn-next2" class="btn2 next2 btnS"> &raquo;</button>
+</div>
+</div>
+</div>
+
+ <div id="cardList" class = "cardContainer d-flex justify-content-center row"></div>
+
+
+                                            <!--FOOTER-->
+
+<footer>
+    <div class="footer py-3">
+      <div class="container">
+        <div class="row text-center">
+          <div class="text-center col-xl-3 col-lg-3 col-12-md col-12-sm">
+            <a href="index.html"><img class="p-3" src="img/logoninja.png" alt="Logo" width="70%"></a>
+          </div>
+          <div class="socials col-xl-3 col-lg-3 col-12-md col-12-sm mb-3">
+            <h2 class="text-white">Redes Sociales</h2>
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-square fa-4x mx-2"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram fa-4x"></i></a>
+            <a href="https://www.twitter.com"><i class="fab fa-twitter-square fa-4x mx-2"></i></a>
+        </div>
+        <div class="copyright col-xl-3 col-lg-3 col-12-md col-12-sm d-flex align-items-center justify-content-center py-2 mb-2 border-top border-bottom">
+            <h5 class="text-white">Stin Gaming 2020 - Todos los Derechos Reservados</h5>
+        </div>
+        <div class="links col-xl-3 col-lg-3 col-12-md col-12-sm d-flex align-self-center">
+            <a class="a-footer" href="aboutUs.html"><h5>Acerca de nosotros</h5></a>
+            <a class="a-footer" href="#"><h5>Contacto: stin@gmail.com</h5></a>
+            <a class="a-footer" href="error404.html"><h5>Legales</h5></a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+                                            
+    
+<script src="js/carousel3.js"></script>
+<script src="js/search.js"></script>
+<!--<script src="carousel2.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>   
+</body>
+</html>
+
+
+
+    

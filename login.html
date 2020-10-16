@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STIN</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/footer.css">
+      <!-- FONT AWESOME -->
+      <script src="https://kit.fontawesome.com/4e9df753cf.js" crossorigin="anonymous"></script>
+</head>
+<body class="azulOscuro" id="body">
+
+     <!-- NAVBAR  -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-000000 pb-0">
+        <div class="container">
+          <a class="col-1 m-0 pr-0" href="landing.html">
+              <img style="width: 40px;" src="img/logoninja.png" alt="logo">
+          </a>
+          <h2 class="text-white">STIN</h2>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="landing.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="aboutUs.html">Acerca de Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="home.html" > Biblioteca </a>             
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Cuenta
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="login.html">Iniciar Sesión</a>
+                  <a class="dropdown-item" href="register.html">Registro</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </nav>
+
+    <div class="container mt-5">
+        <div class="container mt-5 row rounded">
+            <!-- Login Ivo-->
+            <div class="container mt-5 col-12 col-md-5 col-lg-3 violetaOscuro cajas">
+                <form action="" class="mt-2" id="form">
+                    <h1>Iniciar Sesión</h1>
+                    <div class="form-group">
+                        <label for="username" class="mt-4">Nombre de Usuario</label><br>
+                        <input type="text" id="userName" placeholder="username" class="border p-1 rounded" required><br>
+                        <label for="userpassword" class="mt-4">Contraseña</label><br>
+                        <input type="password" id="userPass" placeholder="password" class="border p-1 rounded" required><br>
+                        <input type="checkbox" name="checkbox" id="checkbox" class="mt-4">
+                        <label for="checkbox">Mantenerme Logueado</label><br>
+                        <div id="error"></div>
+                        <button type="submit" id="submit" class="mt-4 btn text-white">Login</button>
+                        <p class="mt-4">¿Has olvidado tu Contraseña? <a href="#" data-toggle="modal" data-target="#modal">Recuperar Contraseña</a></p>
+                    </div>
+                </form>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content azulOscuro">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Recuperar Contraseña</h5>
+                    </div>
+                    <div class="modal-body">Por favos ingrese su email de registro y le enviaremos su contraseña</div>
+                    <input type="email" name="" id="modalemail" placeholder="ejemplo@ejemplo.com" class="border rounded p-1 mx-4">
+                    <div class="">
+                        <button type="button" class="btn m-3 btnSuccess text-white">Enviar</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Registro -->
+            <div class="container mt-5 col-12 col-md-5 col-lg-3 violetaOscuro cajas">
+                <h4 class="text-center mt-2">¿No estas registrado?</h2>
+                <h1 class="text-center">¡Registrate!</h1>
+                <div class="d-flex justify-content-center">
+                    <a href="register.html"><button class="btn text-white mt-5 mb-3" id="btn-registro">Crear Usuario</button></a>
+                </div>
+            </div>
+            <!-- ETC-->
+            <div class="container mt-5 col-12 col-md-5 col-lg-3 violetaOscuro cajas">
+                <h3 class="text-center mt-2">¿Qué te podemos ofrecer en STIN?</h3>
+                <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus nobis illum veritatis, minima fugit ducimus ullam, excepturi fugiat eaque ratione laboriosam laudantium tempore blanditiis nostrum culpa similique sunt omnis placeat?</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer py-3">
+          <div class="container">
+            <div class="row text-center">
+              <div class="text-center col-xl-3 col-lg-3 col-12-md col-12-sm">
+                <a href="index.html"><img class="p-3" src="img/logoninja.png" alt="Logo" width="70%"></a>
+              </div>
+              <div class="socials col-xl-3 col-lg-3 col-12-md col-12-sm mb-3">
+                <h2 class="text-white">Redes Sociales</h2>
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-square fa-4x mx-2"></i></a>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram fa-4x"></i></a>
+                <a href="https://www.twitter.com"><i class="fab fa-twitter-square fa-4x mx-2"></i></a>
+            </div>
+            <div class="copyright col-xl-3 col-lg-3 col-12-md col-12-sm d-flex align-items-center justify-content-center py-2 mb-2 border-top border-bottom">
+                <h5 class="text-white">Stin Gaming 2020 - Todos los Derechos Reservados</h5>
+            </div>
+            <div class="links col-xl-3 col-lg-3 col-12-md col-12-sm d-flex align-self-center">
+                <a class="a-footer" href="aboutUs.html"><h5>Acerca de nosotros</h5></a>
+                <a class="a-footer" href="#"><h5>Contacto: stin@gmail.com</h5></a>
+                <a class="a-footer" href="error404.html"><h5>Legales</h5></a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

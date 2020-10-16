@@ -1,0 +1,27 @@
+/*Footer*/
+.footer{
+    background-color:black;
+    /*background-color: #051923;*/
+    display: flex ;
+    align-items: center ;
+    justify-content: space-around;
+}   
+.ls{
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+
+.a-footer{
+    text-decoration: none;
+    color: whitesmoke;
+    cursor: pointer;
+}
+/*.a-footer:hover{
+    text-decoration: none;
+    color: #234BCE;
+}*/
+.links{ 
+  display: flex;
+  flex-direction: column;
+}

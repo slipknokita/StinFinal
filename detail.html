@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Page</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/4e9df753cf.js" crossorigin="anonymous"></script>
+    <!-- STYLE -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+      <!-- FONT AWESOME -->
+      <script src="https://kit.fontawesome.com/4e9df753cf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <!-- NAVBAR  -->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-000000 pb-0">
+    <div class="container">
+      <a class="col-1 m-0 pr-0" href="landing.html">
+          <img style="width: 40px;" src="img/logoninja.png" alt="logo">
+      </a>
+      <h2 class="text-white">STIN</h2>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="landing.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="aboutUs.html">Acerca de Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="home.html" > Biblioteca </a>             
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Cuenta
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="login.html">Iniciar Sesión</a>
+              <a class="dropdown-item" href="register.html">Registro</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+
+    <div class="background-prototype b-detail">
+        <div class="background-detail">
+            <div class="container">
+                <div class="pt-4">
+                    <span>Todos los juegos > Acción > Marvel's Spider-Man: Miles Morales</span>
+                </div>
+                <div class="my-3">
+                    <h1>Marvel's Spider-Man: Miles Morales</h1>
+                </div>
+                <div class="row">
+                    <div class="view-smart d-block d-sm-block d-md-block d-lg-none">
+                        <div class="col-xl-4 col-lg-4 col-4-md col-12-sm review">
+                            <img class="img-desc mt-3" src="img/galery-spiderman/description-spiderman.png" alt="img-juego">
+                            <h4 class="mt-3">Valoracion de usuarios</h4>
+                            <p class="d-inline-block m-0">Reseñas Positivas: &nbsp;&nbsp;<p class="d-inline-block m-0" id="countingPositive">0</p></p>
+                            <p class="d-inline-block m-0">Reseñas Negativas: &nbsp;&nbsp;<p class="d-inline-block m-0" id="countingNegative">0</p></p>
+                            <p class="d-inline-block m-0">Reseñas Totales: &nbsp;&nbsp;<p class="d-inline-block m-0" id="countingTotal">0</p></p>
+                            <p class="d-inline-block m-0">Veces marcado como favorito: &nbsp;&nbsp;<p class="d-inline-block m-0" id="countingFavorite">0</p></p>
+                            <h4>Puntúa este juego!</h4>
+                            <div class="container">
+                                <div class="row py-3 ">
+                                    <div class="d-flex justify-content-center">
+                                        <div class="col-4">
+                                            <button id="btn" class="btn" onclick="countPositive()"><a href="#"><i class="far fa-thumbs-up fa-3x"></i></a></button>
+                                        </div>
+                                        <div class="col-4">
+                                            <button id="btn" class="btn" onclick="countNegative()"><a href="#"><i class="far fa-thumbs-down fa-3x"></i></a></button>
+                                        </div>
+                                        <div class="col-4">
+                                            <button id="btn" class="btn" onclick="countFavorite()"><a href="#"><i class="fas fa-heart fa-3x"></i></a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="warning"></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-7-md col-12-sm">
+                        <h2>Información del juego</h2>
+                        <p>Marvel's Spider-Man: Miles Morales es un próximo videojuego de acción y aventuras desarrollado por Insomniac Games y publicado por Sony Interactive Entertainment para PlayStation 4 y PlayStation 5. Está basado en el superhéroe de Marvel Comics Miles Morales. Viajaremos por una ciudad de Nueva York mejor recreada y detallada, combatiendo el crimen y luchando contra los habituales villanos de los cómics de Marvel. Será el segundo juego de la serie Marvel's Spider-Man, después de Marvel's Spider-Man (2018). Se anunció en el evento de revelación en vivo de PlayStation 5 en junio de 2020, mientras que la versión de PlayStation 4 fue revelada el 16 de septiembre del mismo año. Su lanzamiento está programado para el cuarto trimestre de 2020 como título de lanzamiento.</p>
+                        <h2>Ficha técnica de la versión PS5 y PS4</h2>
+                        <ul>
+                            <li>Fecha de lanzamiento: 19/11/2020</li>
+                            <li>Desarrollo: Insomniac Games</li>
+                            <li>Producción: PlayStation Studios</li>
+                            <li>Distribución: Sony</li>
+                            <li>Precio: 59,99 €</li>
+                            <li>Jugadores: 1</li>
+                            <li>Formato: Blu-ray</li>
+                            <li>Textos: Multilenguaje</li>
+                            <li>Voces: Multilenguaje</li>
+                            <li>Online: No confirmado</li>
+                        </ul>
+                    </div>
+                    <div class="view-desktop d-none d-sm-none d-md-none d-lg-block col-xl-4 col-lg-4 col-4-md col-12-sm review">
+                        <img class="img-desc mt-3" src="img/galery-spiderman/description-spiderman.png" alt="img-juego">
+                        <h3 class="mt-3 pb-4">Valoracion de usuarios</h3>
+                        <p class="d-inline-block m-0">Reseñas Positivas: &nbsp;&nbsp;<p class="d-inline-block m-0" id="countingPositive2">0</p></p>
+                        <p class="d-inline-block m-0">Reseñas Negativas: &nbsp;&nbsp;<p class="d-inline-block m-0" id="countingNegative2">0</p></p>
+                        <p class="d-inline-block m-0">Reseñas Totales: &nbsp;&nbsp;<p class="d-inline-block m-0" id="countingTotal2">0</p></p>
+                        <p class="d-inline-block m-0">Veces marcado como favorito: &nbsp;&nbsp;<p class="d-inline-block m-0" id="countingFavorite2">0</p></p>
+                        <h3>Puntúa este juego!</h3>
+                        <div class="container">
+                            <div class="row py-3 ">
+                                <div class="d-flex justify-content-center">
+                                    <div class="col-4">
+                                        <button id="btn" class="btn" onclick="countPositive()"><a href="#"><i class="far fa-thumbs-up fa-3x"></i></a></button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button id="btn" class="btn" onclick="countNegative()"><a href="#"><i class="far fa-thumbs-down fa-3x"></i></a></button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button id="btn" class="btn" onclick="countFavorite()"><a href="#"><i class="fas fa-heart fa-3x"></i></a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p id="warning"></p>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-12-md col-12-sm mt-4">
+                        <h2>Trailer</h2>
+                        <div class="embed-container border border-dark rounded">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/gHzuHo80U2M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-12-md col-12-sm mt-4">
+                        <h2>Gameplay</h2>
+                        <div class="embed-container border border-dark rounded">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/WOJVvb81BTU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="d-flex justify-content-center my-3">GALERIA</h1>
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <img class="img-galery" src="img/galery-spiderman/spiderman1.png" alt="spiderman1">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <img class="img-galery" src="img/galery-spiderman/spiderman2.png" alt="spiderman2">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <img class="img-galery" src="img/galery-spiderman/spiderman3.png" alt="spiderman3">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <img class="img-galery" src="img/galery-spiderman/spiderman4.png" alt="spiderman4">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <img class="img-galery" src="img/galery-spiderman/spiderman5.png" alt="spiderman5">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <img class="img-galery" src="img/galery-spiderman/spiderman6.png" alt="spiderman6">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <img class="img-galery" src="img/galery-spiderman/spiderman7.png" alt="spiderman7">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <img class="img-galery" src="img/galery-spiderman/spiderman8.png" alt="spiderman8">
+                    </div>
+                </div>
+                <div>
+                    <h1 class="my-3">Opiniones de los usuarios</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer py-3">
+          <div class="container">
+            <div class="row text-center">
+              <div class="text-center col-xl-3 col-lg-3 col-12-md col-12-sm">
+                <a href="index.html"><img class="p-3" src="img/logoninja.png" alt="Logo" width="70%"></a>
+              </div>
+              <div class="socials col-xl-3 col-lg-3 col-12-md col-12-sm mb-3">
+                <h2 class="text-white">Redes Sociales</h2>
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-square fa-4x mx-2"></i></a>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram fa-4x"></i></a>
+                <a href="https://www.twitter.com"><i class="fab fa-twitter-square fa-4x mx-2"></i></a>
+            </div>
+            <div class="copyright col-xl-3 col-lg-3 col-12-md col-12-sm d-flex align-items-center justify-content-center py-2 mb-2 border-top border-bottom">
+                <h5 class="text-white">Stin Gaming 2020 - Todos los Derechos Reservados</h5>
+            </div>
+            <div class="links col-xl-3 col-lg-3 col-12-md col-12-sm d-flex align-self-center">
+                <a class="a-footer" href="aboutUs.html"><h5>Acerca de nosotros</h5></a>
+                <a class="a-footer" href="#"><h5>Contacto: stin@gmail.com</h5></a>
+                <a class="a-footer" href="error404.html"><h5>Legales</h5></a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="js/detail.js"></script>
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
