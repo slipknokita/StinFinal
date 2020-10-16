@@ -1,12 +1,23 @@
 a {
     text-decoration: none;
 }
-.azulOscuro {
-    background:linear-gradient(30deg,#08032be2,black);
+.fondoLogin {
+    background-image: url("/img/fondologin.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
 }
 .violetaOscuro {
-    
-    background:linear-gradient(90deg, #1e2460, #38338F);
+    background:linear-gradient(90deg,rgba(38, 38, 38, 0.7), rgba(0, 0, 0, 0.7));
+}
+main {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+.azulOscuro {
+    background:linear-gradient(#08032be2,black);
 }
 * {
     color: #f8f9fa;
