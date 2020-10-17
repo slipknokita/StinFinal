@@ -1,4 +1,8 @@
 /*Footer*/
+footer {
+    top: auto;
+    position: relative;
+}
 .footer{
     background-color:black;
     /*background-color: #051923;*/
