@@ -23,9 +23,12 @@
 }
 
 .searchButton {
-   border-radius:3px;
-    background-color:#094293;
+    border-radius:3px;
+    border:none;
+    background-color:#08032be2;
     color:#f8f9fa;
+    padding:3px;
+    
 }
 
 .inputSearch{
@@ -140,3 +143,12 @@ justify-content: space-between;
     cursor:pointer;
 }
 
+.thumbnail:hover {
+    position:relative;
+    top:-25px;
+    left:-35px;
+    width:300px;
+    height:auto;
+    display:block;
+    z-index:999;
+}

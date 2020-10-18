@@ -1,6 +1,7 @@
 const searchBar = document.getElementById ("searchBar");
 const resultContainer = document.getElementById("gamesList");
 const searchBtn = document.getElementById("searchBtn");
+
 URLsearch = 'http://localhost:3000/Games'
 let gamesSearch;
 
@@ -11,6 +12,8 @@ function removeSearch (e){
     while (resultContainer.firstChild) {
         resultContainer.removeChild(resultContainer.firstChild);
     }
+    document.getElementById('inputFather').reset();
+    e.preventDefault();
    /* function removePlaceHolder (e){
         const searchValue = searchBar.value
         searchValue = ""
@@ -69,8 +72,8 @@ const displayGamesSearch = (games) => {
       .map((game) => {
         if (game.publicado === true) {
           return `
-          <div class ="ml-3 mr-3 newCardsResults col-xs-12 col-sm-12 col-md-6 col-lg-2 "> 
-          <div class="card mb-3">
+          <div class =" ml-3 mr-3 newCardsResults col-xs-12 col-sm-12 col-md-6 col-lg-2 "> 
+          <div class=" thumbnail text-white card mb-3" style="background-color: rgba(0,0,0,0.4);">
             <img class="card-img-top"src="${game.imgSource}"
             <div class="card-body">
               <div class="card-title">${game.name}</div>

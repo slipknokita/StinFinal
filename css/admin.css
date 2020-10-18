@@ -72,3 +72,15 @@ h1,h2 {
 p{
     margin-top: 2rem;
 }
+
+.formcontainer{
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    width: 500px;
+
+}
+.editbutton{
+    margin-top: 10px;
+    color: black;
+}
