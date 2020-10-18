@@ -75,28 +75,29 @@ function onClickEventPrev(e){
  function terrorCards (){
      removeAll();
     getGameByCategory ("Terror");
-    /*createTerrorCards(arrayGames);*/
+    cardsContainer.scrollIntoView(true)
    }
 
    function fantasyCards (){
        removeAll();
     getGameByCategory ("Fantasy");
-    /*createFantasyCards(arrayGames);*/
+    cardsContainer.scrollIntoView(true)
    }
 
   function shooterCards (){
     removeAll();
     getGameByCategory ("Shooter");
-    
+    cardsContainer.scrollIntoView(true)
    }
 
    function actionCards (){
     removeAll();
     getGameByCategory ("Accion");
+    cardsContainer.scrollIntoView(true)
    }
 
     const createTerrorCards = games => {
-
+      cardsContainer.scrollIntoView(true)
        games.map((game, index) => {
         if (game.publicado === true) {
            const cardContainer = document.createElement('div'); 
@@ -123,8 +124,9 @@ function onClickEventPrev(e){
       }
       });
      }
+
      const createFantasyCards = games => {
-        
+      cardsContainer.scrollIntoView(true)
         games.map((game, index) => {
           if (game.publicado === true) {
             const cardContainer = document.createElement('div'); 
@@ -152,7 +154,7 @@ function onClickEventPrev(e){
       });
      }
       const createShooterCards = games => {
-        
+        cardsContainer.scrollIntoView(true)
         games.map((game, index) => {
           if (game.publicado === true) {
             const cardContainer = document.createElement('div'); 
@@ -181,7 +183,7 @@ function onClickEventPrev(e){
      }
 
       const createActionCards = games => {
-    
+        cardsContainer.scrollIntoView(true)
         games.map((game, index) => {
           if (game.publicado === true) {
             const cardContainer = document.createElement('div'); 
