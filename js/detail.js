@@ -92,3 +92,34 @@ function removeLS(){
   localStorage.removeItem("userActive");
   location.reload();
 }
+
+async function loadCommentary() {
+    const response = await fetch('https://jsonplaceholder.typicode.com/comments');
+    let comments = await response.json();
+    return comments;
+}
+function mapeoComments(array) {
+    let divComments = ''
+    let arrayToyChiquito = array.filter(element => array.indexOf(element) < 6);
+    arrayToyChiquito.map(element => {
+        divComments = divComments + `<div class="border border-dark rounded m-1 p-1 bg-light">
+          <p class="font-weight-bold font-italic fontComments">${element.name} (${element.email}) commented:</p> ${element.body} 
+           </div> 
+           </br>`
+    });
+    commentsSection.innerHTML = divComments;
+}
+loadCommentary().then(objs => {
+    let array = [];
+    for (let key in objs) {
+        if (objs.hasOwnProperty(key)) {
+            let item = objs[key];
+            array.push({
+                name: item.name,
+                email: item.email,
+                body: item.body
+            });
+        }
+    }
+    mapeoComments(array);
+});

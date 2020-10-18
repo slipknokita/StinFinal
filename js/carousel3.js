@@ -101,7 +101,7 @@ function onClickEventPrev(e){
         if (game.publicado === true) {
            const cardContainer = document.createElement('div'); 
            cardContainer.innerHTML = `
-           <div class="card mb-3 ml-3 mr-3" style="max-width: 540px;">
+           <div class="card bg-light mb-3 ml-3 mr-3" style="max-width: 800px;">
            <div class="row no-gutters ">
              <div class="col-md-4">
                <img src="${game.imgSource}" class="card-img" alt="...">
@@ -129,7 +129,7 @@ function onClickEventPrev(e){
           if (game.publicado === true) {
             const cardContainer = document.createElement('div'); 
             cardContainer.innerHTML = `
-            <div class="card mb-3 ml-3 mr-3" style="max-width: 540px;">
+            <div class="card mb-3 ml-3 mr-3" style="max-width: 800px;">
             <div class="row no-gutters ">
               <div class="col-md-4">
                 <img src="${game.imgSource}" class="card-img" alt="...">
@@ -157,7 +157,7 @@ function onClickEventPrev(e){
           if (game.publicado === true) {
             const cardContainer = document.createElement('div'); 
             cardContainer.innerHTML = `
-            <div class="card mb-3 ml-3 mr-3" style="max-width: 540px;">
+            <div class="card mb-3 ml-3 mr-3" style="max-width: 800px;">
             <div class="row no-gutters ">
               <div class="col-md-4">
                 <img src="${game.imgSource}" class="card-img" alt="...">
@@ -186,7 +186,7 @@ function onClickEventPrev(e){
           if (game.publicado === true) {
             const cardContainer = document.createElement('div'); 
             cardContainer.innerHTML = `
-            <div class="card mb-3 ml-3 mr-3" style="max-width: 540px;">
+            <div class="card mb-3 ml-3 mr-3" style="max-width: 800px;">
             <div class="row no-gutters ">
               <div class="col-md-4">
                 <img src="${game.imgSource}" class="card-img" alt="...">

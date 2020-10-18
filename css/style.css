@@ -27,7 +27,6 @@ body{
 .b-detail{
     background:linear-gradient(#08032be2,black);
     color:white;
-    min-height: 3000px;
 }
 
 /*.b-detail{
@@ -133,10 +132,19 @@ a{
     cursor: pointer;
 }
 a:hover{
-    text-decoration: none;
-    color: #234BCE;
+    /*text-decoration: none;*/
+    color: whitesmoke;
 }
 .links{ 
   display: flex;
   flex-direction: column;
+}
+
+
+.divComments{
+    width: auto;
+    height: auto;    
+}
+.fontComments{
+    font-size: medium;
 }
