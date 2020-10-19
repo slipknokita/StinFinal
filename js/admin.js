@@ -13,7 +13,6 @@ const editFormContainer = document.getElementById('editFormContainer');
    const imagengame=document.getElementById('imagen').value;
    const data = { name: namegame, style: stylegame, category: categorygame,publicado:publishedgame,destacado:'no',imgSource:imagengame};
    postNewTodo(data);
-   
  })
 
 
@@ -78,15 +77,98 @@ const editFormContainer = document.getElementById('editFormContainer');
    })
    const newData = await response.json();
    console.log(newData);
-   debugger
  }
 
+ async function deleteVideoGame (id) {
+  const newURL = `http://localhost:3000/Games/${id}`;
+  const response = await fetch(newURL,{
+    method: 'DELETE'
+  })
+}
 
 getTodos().then(Games => buildTodo(Games));
 
 
 
-/*Enrico*/
+todoList.addEventListener(`click`, e => {
+  if(e.target.classList.contains(`btndelete`)) {
+    console.log("delete")
+    const id = e.target.id;
+    deleteVideoGame(id);
+  }
+})
+
+todoList.addEventListener(`click`,e => {
+  if(e.target.classList.contains(`btnedit`)) {
+    console.log("btonpress")
+    const id = e.target.id;
+    getgamesbyId(id).then(game => createForm(game))
+}
+})
+
+async function getgamesbyId(id) {
+  const url = `http://localhost:3000/Games/${id}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+}
+
+function createForm(values) {
+  const form = document.createElement('form');
+  form.id = 'editForm'
+  form.classList.add('editableForm')
+  form.innerHTML = `
+  <div>
+      <label for="todoInput">Id:</label><br>
+      <input value="${values.id}" type="text" placeholder="Ingrese Id" id="idvalue" />
+    </div>
+    <div>
+      <label for="todoInput">Nombre:</label><br>
+      <input value="${values.name}" type="text" placeholder="Ingrese Nombre" id="namevalue" />
+    </div>
+    <div>
+      <label for="todoInput">Categoria:</label><br>
+      <input value="${values.category}" type="text" placeholder="Ingrese Categoria" id="categoryvalue" />
+    </div><div>
+    <label for="todoInput">Estilo:</label><br>
+    <input value="${values.style}" type="text" placeholder="Ingrese estilo" id="stylevalue" />
+  </div><div>
+  <label for="todoInput">Publicado:</label><br>
+  <input value="${values.publicado}" type="text" placeholder="Publicado?" id="publicadovalue" />
+</div>
+  <button class="putContent editbutton" id=${values.id} type="submit">Editar</button>
+  `
+  editFormContainer.appendChild(form);
+}
+
+async function editTodo(id, inputData) {
+  const url= `http://localhost:3000/Games/${id}`;
+  const response = await fetch(url, {
+    method: 'PUT',
+    body: JSON.stringify(inputData),
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+  })
+  const data = await response.json();
+  return data;
+}
+
+editFormContainer.addEventListener('submit', e => {
+  if (e.target.classList.contains('putContent')) {
+    e.preventDefault();
+    const idvalue = document.getElementById(`idvalue`).value
+    const namevalue = document.getElementById(`namevalue`).value
+    const categoryvalue = document.getElementById(`categoryvalue`).value
+    const stylevalue = document.getElementById(`stylevalue`).value
+    const publicadovalue = document.getElementById(`publicadovalue`).value
+    const data = {id: idvalue, name: namevalue, category: categoryvalue, style: stylevalue, publicado: publicadovalue}
+    editTodo(idvalue, data);
+  }
+})
+
+/*Enrico
 todoList.addEventListener('click',e => {
   if(e.target.classList.contains('editButton')) {
     const id = e.target.id;
@@ -159,17 +241,7 @@ editFormContainer.addEventListener('submit', e => {
         publicado: publicadovalue}
     editTodo(idvalue, data);
   }
-})
-
-
-/*todoList.addEventListener('click',e => {
-  if(e.target.classList.contains('btndestacado')) {
-    destacar()
-  }
-    if (e.target.classList.contains('btndelete')) {
-      borrar()
-    }
-  })*/
+})*/
 
 
 
