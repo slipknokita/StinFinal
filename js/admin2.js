@@ -56,7 +56,7 @@
         <button id= ${game.id} type="button" class="btn  btnedit editButton text-white" data-toggle="modal" data-target="#modalForm"><span class="fas fa-edit"></span>Editar</button>
         </td>
         <td class="">
-        <button type="button" class="btndestacado btn text-white"><span class="fas fa-star"></span>Destacado</button>
+        <button id= ${game.id} type="button" class="btndestacado btn text-white"><span class="fas fa-star"></span>Destacado</button>
         </td>
       `
         todoList.appendChild(row);
@@ -204,47 +204,6 @@
     })
  
 
-/**/
-
-   /* async function modifyDestacar (id, dataDestacado) {
-      const newURL = `http://localhost:3000/Games/${id}`;
-      const response = await fetch(newURL, {
-        method: 'PATCH',
-        body: JSON.stringify(dataDestacado),
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/merge-patch+json'
-        },
-      })
-      const data = await response.json();
-      return data;
-    }*/
-
-
-   /* async function modifyDestacar(id,game) {
-      console.log(game);
-      const url= `http://localhost:3000/Games/${id}`;
-      const response = await fetch(url, {
-        method: 'PATCH'/url,
-        body: JSON.stringify(game),
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/merge-patch+json'
-        },
-      })
-      const data = await response.json();
-      return data;
-    }
-
-    todoList.addEventListener(`click`,e => {
-      console.log(e);
-      if(e.target.classList.contains(`btndestacado`)) {
-        const id = e.target.id;
-        getgamesbyId(id).then(game => modifyDestacar(id,game))
-    }
-    })*/
-
-   
 
     /*Ivo*/
     let loginActive = document.getElementById("responsiveUser");
@@ -272,6 +231,30 @@ loginOn();
 function removeLS(){
   localStorage.removeItem("userActive");
   location.reload();
+}
+
+todoList.addEventListener(`click`, e => {
+  if(e.target.classList.contains(`btndestacado`)) {
+    const id = e.target.id;
+    const dataDestacado = {destacado: "si"}
+    destacarVideogame(id, dataDestacado);
+  }
+})
+
+async function destacarVideogame (id, dataDestacado) {
+  console.log(id)
+  console.log(dataDestacado)
+  const newURL = `http://localhost:3000/Games/${id}`;
+  const response = await fetch(newURL, {
+    method: 'PATCH',
+    body: JSON.stringify(dataDestacado),
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+  })
+  const data = await response.json();
+  return data;
 }
 
    

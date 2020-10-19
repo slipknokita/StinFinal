@@ -111,24 +111,24 @@
                         </ul>
                     </div>
                     <div class="view-desktop d-none d-sm-none d-md-none d-lg-block col-xl-4 col-lg-4 col-4-md col-12-sm review">
-                        <img class="img-desc mt-3" src="img/galery-spiderman/description-spiderman.png" alt="img-juego">
-                        <h3 class="mt-3 pb-4">Valoracion de usuarios</h3>
+                        <img id="likecard" class="img-desc mt-3" src="img/galery-spiderman/description-spiderman.png" alt="img-juego">
+                        <h3  class="mt-3 pb-4">Valoracion de usuarios</h3>
                         <p class="d-inline-block m-0">Reseñas Positivas: &nbsp;&nbsp;<p class="d-inline-block m-0" id="countingPositive2">0</p></p>
                         <p class="d-inline-block m-0">Reseñas Negativas: &nbsp;&nbsp;<p class="d-inline-block m-0" id="countingNegative2">0</p></p>
                         <p class="d-inline-block m-0">Reseñas Totales: &nbsp;&nbsp;<p class="d-inline-block m-0" id="countingTotal2">0</p></p>
                         <p class="d-inline-block m-0">Veces marcado como favorito: &nbsp;&nbsp;<p class="d-inline-block m-0" id="countingFavorite2">0</p></p>
                         <h3>Puntúa este juego!</h3>
-                        <div class="container">
+                        <div  class="container">
                             <div class="row py-3 ">
-                                <div class="d-flex justify-content-center">
+                                <div  class="d-flex justify-content-center">
                                     <div class="col-4">
-                                        <button id="btn" class="btn" onclick="countPositive()"><a href="#"><i class="far fa-thumbs-up fa-3x"></i></a></button>
+                                        <button id="btn" class="btn"  onclick="countPositive()"><a href="#likecard"><i class="far fa-thumbs-up fa-3x"></i></a></button>
                                     </div>
                                     <div class="col-4">
-                                        <button id="btn" class="btn" onclick="countNegative()"><a href="#"><i class="far fa-thumbs-down fa-3x"></i></a></button>
+                                        <button id="btn" class="btn"  onclick="countNegative()"><a href="#likecard"><i class="far fa-thumbs-down fa-3x"></i></a></button>
                                     </div>
                                     <div class="col-4">
-                                        <button id="btn" class="btn" onclick="countFavorite()"><a href="#"><i class="fas fa-heart fa-3x"></i></a></button>
+                                        <button id="btn" class="btn"  onclick="countFavorite()"><a href="#likecard"><i class="fas fa-heart fa-3x"></i></a></button>
                                     </div>
                                 </div>
                             </div>

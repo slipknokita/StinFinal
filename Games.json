@@ -5,7 +5,7 @@
       "name": "Outlast",
       "category": "Terror",
       "style": "singleplayer",
-      "publicado": true,
+      "publicado": false,
       "imgSource": "/img/T1.jpg",
       "destacado": "si"
     },
@@ -25,7 +25,7 @@
       "category": "Shooter",
       "imgSource": "/img/S1.jpg",
       "publicado": true,
-      "destacado": "no"
+      "destacado": "si"
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "category": "Accion",
       "imgSource": "/img/A1.jpg",
       "publicado": true,
-      "destacado": "no"
+      "destacado": "si"
     },
     {
       "id": 5,
