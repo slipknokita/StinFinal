@@ -29,14 +29,6 @@ body{
     color:white;
 }
 
-/*.b-detail{
-    position: relative;
-    background: url(../img/background-blue2.png);
-    background-position: center;
-    background-size: cover;
-    color:white;
-    min-height: 2000px;
-}*/
 
 .background-overlay{
     position: absolute;
@@ -132,7 +124,6 @@ a{
     cursor: pointer;
 }
 a:hover{
-    /*text-decoration: none;*/
     color: whitesmoke;
 }
 .links{ 

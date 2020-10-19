@@ -11,9 +11,7 @@ a {
 * {
     color: #f8f9fa;
 }
-.btn {
-    background-color: #7040D4;
-}
+
 
 .btndelete{
     background-color:  #5c0303
@@ -83,4 +81,8 @@ p{
 .putContent{
     margin-top: 10px;
     color: black;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.5);
 }

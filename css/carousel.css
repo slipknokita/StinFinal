@@ -1,6 +1,5 @@
 .body{
     background:linear-gradient(#08032be2,black);
-    /*:linear-gradient(90deg, #17043C, #051923);051923*/
 }
 
 .searchInputWrapper{
@@ -66,9 +65,6 @@
     margin:auto;
     align-items:center;
     position:relative;
-    /*border:2px solid black;
-    border-radius:3px;
-    justify-content:center;*/
 }
 
 .carouselTitle{
@@ -101,9 +97,6 @@
 
 .buttons2{
 padding:15px 0px;
-/*display:flex;
-justify-content: space-between;*/
- /*estaba en relative */
 }
 
 .seleccion {

@@ -5,7 +5,6 @@ footer {
 }
 .footer{
     background-color:black;
-    /*background-color: #051923;*/
     display: flex ;
     align-items: center ;
     justify-content: space-around;
@@ -21,10 +20,7 @@ footer {
     color: whitesmoke;
     cursor: pointer;
 }
-/*.a-footer:hover{
-    text-decoration: none;
-    color: #234BCE;
-}*/
+
 .links{ 
   display: flex;
   flex-direction: column;

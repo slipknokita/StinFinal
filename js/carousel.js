@@ -1,8 +1,6 @@
 const arrayCarousel = ['img/TerrorG.jpg','img/FantasyG.jpg','img/ShooterG.jpg','img/AccionG.jpg']
 let imgContainer = document.getElementById ("img-container")
 let imgCarousel = document.getElementById ("carousel-image")
-/*console.log(imgCarousel)
-console.log(imgContainer)*/
 let btnprev = document.getElementById("btn-prev2")
 let btnnext = document.getElementById("btn-next2")
 let categories = document.getElementsByClassName ("category")
@@ -37,7 +35,7 @@ function onClickEventPrev(e){
  if (e.target.classList.contains('slider-img')){
      const carouselInfo = e.target.parentElement;
      readCarouselInfo(carouselInfo)
-     /*console.log(carouselInfo)*/
+     
  }
  }
  
@@ -46,9 +44,9 @@ function onClickEventPrev(e){
  function readCarouselInfo(carouselInfo){
      carouselInfo = {
          image:carouselInfo.querySelector('img').src,
-         /*idCarousel: carouselInfo.querySelector('img').getAttribute('id')*/
+        
      }
-     /*console.log(carouselInfo)*/
+     
    saveCarouselInfo(carouselInfo);
    showGames(carouselInfo);
  }
@@ -215,24 +213,7 @@ function redirectCards(e) {
     window.location.href="detail.html";
 }
 
-/*
-const getData = url_api => {
-    return new Promise((resolve, reject) => {
-      fetch(url_api)
-      .then(response => {
-        if(response.status === 200) {
-          resolve(response.json())
-          console.log(response);
-        } else {
-          const error = new Error('Hubo error', url_api)
-          reject(error);
-        }
-      })
-    })
-  } */
 
-
-  
   const getGameByCategory = async (category) => {
     const url = `http://localhost:3000/Games?category=${category}`;
     try {
@@ -256,14 +237,7 @@ const getData = url_api => {
     }
   }
 
- 
- /* getData(URLAPI)
-  .then(response => {
-    console.log(response) 
-  })
-  .catch(error => {
-    console.log(error);
-  })*/
+
 
  // Ivo
 

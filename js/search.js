@@ -14,10 +14,6 @@ function removeSearch (e){
     }
     document.getElementById('inputFather').reset();
     e.preventDefault();
-   /* function removePlaceHolder (e){
-        const searchValue = searchBar.value
-        searchValue = ""
-    }*/
 }
 
 searchBar.addEventListener('keyup',(e)=>{
@@ -40,7 +36,6 @@ const getGames = async url_api => {
     const response = await fetch(url_api);
     let games = await response.json();
     pushArray(games);
-   /* displayGamesSearch(games);*/
   } catch (error) {
     if(error) {
       const error = new Error('Hubo un error', url_api)
@@ -49,23 +44,13 @@ const getGames = async url_api => {
   }
 } 
   getGames(URLsearch)
-  /*.then(response => console.log(response))
-  .catch(error => console.log(error));*/
+
 
 function pushArray (games) {
     gamesSearch = games;
     console.log(gamesSearch)
 }
 
-/*<div class ="newCardsResults col-xs-12 col-sm-12 col-md-6 col-lg-1 "> 
-<div class="card">
-  <img class="card-img-top"src="${game.imgSource}"
-  <div class="card-body">
-    <div class="card-title">${game.name}</div>
-    <div class="card-text">${game.style}</div>
-  </div>
-</div>
-</div>*/
 
 const displayGamesSearch = (games) => {
   const htmlGames = games

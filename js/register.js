@@ -18,26 +18,19 @@ submitRegister.addEventListener("submit", e => {
         "pais": contry
     };
     if (4 < newUser.length > 16){
-        alert("El nombre de usuario tiene que tener un minimo de 4 caracteres y un maximo de 8(a-z, A-Z, 0-9).");
-        return false;
+        modalError("El nombre de usuario tiene que tener un minimo de 4 caracteres y un maximo de 8(a-z, A-Z, 0-9).");
     } else if (!expresionUser.test(newUser)){
-        alert("El nombre de usuario no puede tener caracteres especiales.");
-        return false;
+        modalError("El nombre de usuario no puede tener caracteres especiales.");
     }else if (8 < newPass.length > 16 ){
-        alert("Su contraseña no es valida, tiene que tener un minimo de 8 caracteres y un maximo de 16.");
-        return false;
+        modalError("Su contraseña no es valida, tiene que tener un minimo de 8 caracteres y un maximo de 16.");
     } else if (newPass != newPassV){
-        alert("Sus contraseña no coinciden.");
-        return false;
+        modalError("Sus contraseña no coinciden.");
     } else if (!expresionMail.test(newEmail)){
-        alert("El formato de su email no es valido.")
-        return false;
+        modalError("El formato de su email no es valido.")
     } else if (newEmail != newEmailV){
-        alert("Sus email no coinciden.");
-        return false;
+        modalError("Sus email no coinciden.");
     } else if (contry === ""){
-        alert("Complete su país de residencia.");
-        return false;
+        modalError("Complete su país de residencia.");
     } else {
         users.push(user);
         console.log(users);
@@ -48,6 +41,21 @@ submitRegister.addEventListener("submit", e => {
         localStorage.setItem("users", JSON.stringify(users));
     }
 });
+
+function modalError (text){
+    let error = document.createElement("div");
+document.getElementById("modalError").appendChild(error);
+    error.innerHTML=`
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>${text}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    `
+}
+
+
 let loginActive = document.getElementById("responsiveUser");
 function loginOn (){
     if (localStorage.getItem("userActive") == "admin"){

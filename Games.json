@@ -3,10 +3,10 @@
     {
       "id": 1,
       "name": "Outlast",
-      "style": "singleplayer",
       "category": "Terror",
-      "imgSource": "/img/T1.jpg",
+      "style": "singleplayer",
       "publicado": true,
+      "imgSource": "/img/T1.jpg",
       "destacado": "si"
     },
     {
