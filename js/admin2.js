@@ -47,7 +47,7 @@
         ${game.destacado}
         </td>
         <td>
-        ${game.imgSource}
+        <img src="${game.imgSource}" class="card-img" alt="...">
         </td>
         <td class="">
         <button id= ${game.id} type="button" class="btn btndelete deleteButton text-white"><span class="fas fa-trash-alt"></span>Borrar</button>
