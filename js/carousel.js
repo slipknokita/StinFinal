@@ -1,7 +1,7 @@
 const arrayCarousel = ['img/TerrorG.jpg','img/FantasyG.jpg','img/ShooterG.jpg','img/AccionG.jpg']
 let imgContainer = document.getElementById ("img-container")
 let imgCarousel = document.getElementById ("carousel-image")
-let btnprev = document.getElementById("btn-prev2")
+let btnprev = document.getElementById ("btn-prev2")
 let btnnext = document.getElementById("btn-next2")
 let categories = document.getElementsByClassName ("category")
 let categoryTerror = document.getElementById ("categoryTerror")
@@ -100,7 +100,7 @@ function onClickEventPrev(e){
         if (game.publicado === true) {
            const cardContainer = document.createElement('div'); 
            cardContainer.innerHTML = `
-           <div class="card text-white mb-3 ml-3 mr-3" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
+           <div class="${game.id} card text-white mb-3 ml-3 mr-3" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
            <div class="row no-gutters ">
              <div class="col-md-4">
                <img src="${game.imgSource}" class="card-img" alt="...">
@@ -129,7 +129,7 @@ function onClickEventPrev(e){
           if (game.publicado === true) {
             const cardContainer = document.createElement('div'); 
             cardContainer.innerHTML = `
-            <div class="card text-white mb-3 ml-3 mr-3" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
+            <div class="${game.id} card text-white mb-3 ml-3 mr-3" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
             <div class="row no-gutters ">
               <div class="col-md-4">
                 <img src="${game.imgSource}" class="card-img" alt="...">
@@ -157,7 +157,7 @@ function onClickEventPrev(e){
           if (game.publicado === true) {
             const cardContainer = document.createElement('div'); 
             cardContainer.innerHTML = `
-            <div class="card text-white mb-3 ml-3 mr-3" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
+            <div class="${game.id} card text-white mb-3 ml-3 mr-3" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
             <div class="row no-gutters ">
               <div class="col-md-4">
                 <img src="${game.imgSource}" class="card-img" alt="...">
@@ -186,7 +186,7 @@ function onClickEventPrev(e){
           if (game.publicado === true) {
             const cardContainer = document.createElement('div'); 
             cardContainer.innerHTML = `
-            <div class="card text-white mb-3 ml-3 mr-3" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
+            <div class="${game.id} card text-white mb-3 ml-3 mr-3" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
             <div class="row no-gutters ">
               <div class="col-md-4">
                 <img src="${game.imgSource}" class="card-img" alt="...">
