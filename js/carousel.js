@@ -1,15 +1,15 @@
 const arrayCarousel = ['img/TerrorG.jpg','img/FantasyG.jpg','img/ShooterG.jpg','img/AccionG.jpg']
-let imgContainer = document.getElementById ("img-container")
-let imgCarousel = document.getElementById ("carousel-image")
-let btnprev = document.getElementById ("btn-prev2")
-let btnnext = document.getElementById("btn-next2")
-let categories = document.getElementsByClassName ("category")
-let categoryTerror = document.getElementById ("categoryTerror")
-let categoryFantasy = document.getElementById ("categoryFantasy")
-let categoryShooter = document.getElementById ("categoryShooter")
-let categoryAccion = document.getElementById ("categoryAccion")
-let cardsContainer = document.getElementById ("cardList")
-let body = document.getElementById("bodyGame");
+const imgContainer = document.getElementById("img-container")
+const imgCarousel = document.getElementById("carousel-image")
+const btnprev = document.getElementById("btn-prev2")
+const btnnext = document.getElementById("btn-next2")
+const categories = document.getElementsByClassName("category")
+const categoryTerror = document.getElementById("categoryTerror")
+const categoryFantasy = document.getElementById("categoryFantasy")
+const categoryShooter = document.getElementById("categoryShooter")
+const categoryAccion = document.getElementById("categoryAccion")
+const cardsContainer = document.getElementById("cardList")
+const body = document.getElementById("bodyGame");
 const URLAPI = "http://localhost:3000/Games"
 
 btnnext.addEventListener('click', onClickEventNext);
