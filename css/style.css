@@ -14,9 +14,9 @@ body{
     background-color: #000;
 }
 
-/*.background-prototype{
+.background-prototype{
     position: relative;
-}*/
+}
 
 .b-landing{
     background: url(../img/background1.png);
@@ -119,6 +119,7 @@ body{
     width: 50px;
     margin: 5px;
 }
+
 a{
     text-decoration: none;
     color: whitesmoke;

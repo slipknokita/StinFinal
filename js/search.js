@@ -74,12 +74,9 @@ const displayGamesSearch = (games) => {
     })
       .join('');
   resultContainer.innerHTML = htmlGames;
-  resultContainer.addEventListener('click',redirectCards)
+  /*resultContainer.addEventListener('click',redirectCards)*/
 };
 
-function redirectCards(e) {
-    window.location.href="detail.html";
-}
 
 getGames(URLsearch);
 
