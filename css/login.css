@@ -61,4 +61,8 @@ strong {
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
+    #form {
+        text-align: center;
+        font-size: 18px;
+    }
 }

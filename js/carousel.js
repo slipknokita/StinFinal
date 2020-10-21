@@ -118,7 +118,7 @@ function onClickEventPrev(e){
          `
          cardContainer.className = 'row justify-content-center col-xs-6 col-sm-6 col-md-6 col-lg-12';
          cardsContainer.appendChild(cardContainer);
-         /*cardContainer.addEventListener('click',redirectCards)*/
+         cardContainer.addEventListener('click',redirectCards)
         } else {
           console.log('This is false');
       }
@@ -149,7 +149,7 @@ function onClickEventPrev(e){
           `
           cardContainer.className = 'row justify-content-center col-xs-6 col-sm-6 col-md-6 col-lg-12';
           cardsContainer.appendChild(cardContainer);
-          /*cardContainer.addEventListener('click',redirectCards)*/
+          cardContainer.addEventListener('click',redirectCards)
         } else {
           console.log('This is false');
       }
@@ -179,7 +179,7 @@ function onClickEventPrev(e){
           `
           cardContainer.className = 'row justify-content-center col-xs-6 col-sm-6 col-md-6 col-lg-12';
           cardsContainer.appendChild(cardContainer);
-          /*cardContainer.addEventListener('click',redirectCards)*/
+          cardContainer.addEventListener('click',redirectCards)
         } else {
           console.log('This is false');
       }
@@ -210,14 +210,17 @@ function onClickEventPrev(e){
           `
           cardContainer.className = 'row justify-content-center col-xs-6 col-sm-6 col-md-6 col-lg-12';
           cardsContainer.appendChild(cardContainer);
-         /* cardContainer.addEventListener('click',redirectCards)*/
+          cardContainer.addEventListener('click',redirectCards)
         } else {
           console.log('This is false');
       }
       });
      }
  
- 
+ function redirectCards(e) {
+    window.location.href= "detail2.html";
+}
+
 
   const getGameByCategory = async (category) => {
     const url = `http://localhost:3000/Games?category=${category}`;
