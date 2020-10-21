@@ -16,12 +16,29 @@ body{
     position: relative;
 }
 
-.b-landing{
+/* .b-landing{
     background: url(../img/background1.png);
     background-position: center;
     background-size: cover;
     min-height: 500px;
+} */
+
+/* /Nuevo Sarhid/ */
+.body-landing{
+    background-color: black;
 }
+
+.b-landing{
+    background: url(../img/background11.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+}
+.img-landing{
+    width: 100%;
+}
+
+/* // */
 
 .b-detail{
     background:linear-gradient(#08032be2,black);
@@ -82,7 +99,7 @@ body{
     width: 100%;
     margin-top: 7px;
     margin-bottom: 7px;
-    
+    box-shadow: 10px 5px 5px black;   
 }
 
 .review{

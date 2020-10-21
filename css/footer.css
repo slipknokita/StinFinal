@@ -15,6 +15,14 @@ footer {
     margin: 5px;
 }
 
+a{
+    text-decoration: none;
+    color: whitesmoke;
+    cursor: pointer;
+}
+a:hover{
+    color: whitesmoke;
+}
 .a-footer{
     text-decoration: none;
     color: whitesmoke;
