@@ -4,6 +4,7 @@ const imgCarousel = document.getElementById("carousel-image")
 const btnprev = document.getElementById("btn-prev2")
 const btnnext = document.getElementById("btn-next2")
 const categories = document.getElementsByClassName("category")
+const parentCategories = document.getElementById("parentCategories");
 const categoryTerror = document.getElementById("categoryTerror")
 const categoryFantasy = document.getElementById("categoryFantasy")
 const categoryShooter = document.getElementById("categoryShooter")
@@ -15,9 +16,48 @@ const URLAPI = "http://localhost:3000/Games"
 btnnext.addEventListener('click', onClickEventNext);
 btnprev.addEventListener('click', onClickEventPrev);
 imgCarousel.addEventListener("click", addCarouselInfo);
-categoryTerror.addEventListener("click",terrorCards);
-categoryFantasy.addEventListener("click",fantasyCards);
-categoryShooter.addEventListener("click",shooterCards);
+
+
+/*parentCategories.addEventListener('click',e => {
+  if(e.target.classList.contains('categoryTerror')) {
+    const id = e.target.id;
+    terrorCards(id);
+    console.log(e)
+  } if (e.target.classList.contains('categoryFantasy')){
+    const id = e.target.id;
+    fantasyCards(id);
+  } if (e.target.classList.contains('categoryShooter')){
+    const id = e.target.id;
+    shooterCards (id);
+  } if (e.target.classList.contains('categoryAccion')){
+    const id = e.target.id;
+    actionCards (id);
+  } else {
+    console.log(false)
+  }
+})
+
+/*parentCategories.addEventListener("click", function(e) {
+   const child1 = e.target.matches(".child, .categoryTerror*");
+   const child2 = e.target.matches(".categoryFantasy, .child*");
+   const child3 = e.target.matches(".categoryShooter, .child*");
+   const child4 = e.target.matches(".categoryAccion, .child*");
+  if (child1) { 
+    terrorCards();
+  } if (child2) {
+    fantasyCards();
+  } if (child3) {
+    shooterCards ();
+  } if (child4) {
+    actionCards ();
+  } else {
+    console.log(false)
+  }
+ });*/
+
+ categoryTerror.addEventListener("click",terrorCards);
+ categoryFantasy.addEventListener("click",fantasyCards);
+ categoryShooter.addEventListener("click",shooterCards);
 categoryAccion.addEventListener("click",actionCards);
 
 
