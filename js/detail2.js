@@ -15,7 +15,7 @@ function buildTodo(game) {
         <div class="">
             <div class="container">
                 <div class="pt-4">
-                    <span>Biblioteca > ${game.category} > ${game.name}</span>
+                    <span><a href="/home.html">Biblioteca</a>> ${game.category} > ${game.name}</span>
                 </div>
                 <div class="my-3">
                     <h1>${game.name}</h1>
@@ -23,7 +23,7 @@ function buildTodo(game) {
                 <div class="row">
                     <div class="view-smart d-block d-sm-block d-md-block d-lg-none">
                         <div class="col-xl-4 col-lg-4 col-4-md col-12-sm review">
-                            <img class="img-desc mt-3" src="img/galery-spiderman/description-spiderman.png" alt="img-juego">
+                            <img class="img-desc mt-3" src="${game.imgSource}" alt="img-juego">
                             <h4 class="mt-3">Valoracion de usuarios</h4>
                             <p class="d-inline-block m-0">Reseñas Positivas: &nbsp;&nbsp;<p class="d-inline-block m-0" id="countingPositive">0</p></p>
                             <p class="d-inline-block m-0">Reseñas Negativas: &nbsp;&nbsp;<p class="d-inline-block m-0" id="countingNegative">0</p></p>
@@ -139,6 +139,33 @@ function buildTodo(game) {
         </div>
         </div>
         </div>
+        <footer class="mt-0 ">
+        <div class="footer ">
+        <div class="footer py-3">
+          <div class="container my-0">
+            <div class="row text-center">
+              <div class="text-center col-xl-3 col-lg-3 col-12-md col-12-sm">
+                <a href="index.html"><img class="p-3" src="img/logoninja.png" alt="Logo" width="70%"></a>
+              </div>
+              <div class="socials col-xl-3 col-lg-3 col-12-md col-12-sm mb-3">
+                <h2 class="text-white">Redes Sociales</h2>
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-square fa-4x mx-2 a-footer"></i></a>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram fa-4x a-footer"></i></a>
+                <a href="https://www.twitter.com"><i class="fab fa-twitter-square fa-4x mx-2 a-footer"></i></a>
+            </div>
+            <div class="copyright col-xl-3 col-lg-3 col-12-md col-12-sm d-flex align-items-center justify-content-center py-2 mb-2 border-top border-bottom">
+                <h5 class="text-white">Stin Gaming 2020 - Todos los Derechos Reservados</h5>
+            </div>
+            <div class="links col-xl-3 col-lg-3 col-12-md col-12-sm d-flex align-self-center">
+                <a class="a-footer" href="aboutUs.html"><h5>Acerca de nosotros</h5></a>
+                <a class="a-footer" href="https://mail.google.com/mail/?view=cm&fs=1&to=stin@gmail.com&su=Consulta&body=Escribenos en que te podemos ayudar. No hacemos reembolso"
+                  target="_blank"><h5>Contacto: stin@gmail.com</h5></a>
+                <a class="a-footer" href="error404.html"><h5>Legales</h5></a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     `
   root.appendChild(info);
 }
