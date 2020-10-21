@@ -29,10 +29,10 @@ body{
 }
 
 .b-landing{
-    background: url(../img/background1.png);
+    background: url(../img/background12.png);
     background-position: center;
     background-size: cover;
-    min-height: 500px;
+    min-height: 400px;
 }
 .img-landing{
     width: 100%;
