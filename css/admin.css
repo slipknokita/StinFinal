@@ -11,8 +11,6 @@ a {
 * {
     color: #f8f9fa;
 }
-
-
 .btndelete{
     background-color:  #5c0303
 }
@@ -32,16 +30,9 @@ a {
     background-color: #24993f;
     border-radius: 7px;
 }
-input {
+input, option, select {
     color: black;
 }
-option {
-    color:black;
-}
-select {
-    color: black;
-}
-
 caption{
     caption-side: top;
 }
@@ -59,18 +50,9 @@ th,td{
 h1,h2 {
     text-align: center;
 }    
-
-.modal{
-    margin-left: 700px;
-    margin-right: 200px;
-    width: 700px;
-    height: 600px;
-}
-
 p{
     margin-top: 2rem;
 }
-
 .formcontainer{
     text-align: center;
     align-items: center;
@@ -82,7 +64,6 @@ p{
     margin-top: 10px;
     color: black;
 }
-
 .modal-content {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 }

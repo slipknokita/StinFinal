@@ -60,7 +60,7 @@ function loginOn (){
         loginActive.innerHTML=`
           <a class="nav-link dropdown-toggle active text-right" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Bienvenido ${localStorage.getItem("userActive")}</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <div class="dropdown-menu  text-right" aria-labelledby="navbarDropdownMenuLink">
             <button class="dropdown-item" onclick="removeLS()">Salir</button>
           </div>
           `
