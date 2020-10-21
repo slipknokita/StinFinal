@@ -57,15 +57,18 @@ const displayGamesSearch = (games) => {
       .map((game) => {
         if (game.publicado === true) {
           return `
-          <div id="${game.id}" class =" ml-3 mr-3 newCardsResults col-xs-12 col-sm-12 col-md-6 col-lg-2 "> 
+          <a href="detail2.html#${game.id}" class =" ml-3 mr-3 newCardsResults col-xs-12 col-sm-12 col-md-6 col-lg-2 ">
+          <div id="${game.id}" > 
           <div class=" thumbnail text-white card mb-3" style="background-color: rgba(0,0,0,0.4);">
             <img class="card-img-top"src="${game.imgSource}"
             <div class="card-body">
               <div class="card-title">${game.name}</div>
-              <div class="card-text">${game.style}</div>
+              <div class="card-text">Estilo: ${game.style}</div>
+              <div class="card-text">Categoria: ${game.category}</div>
             </div>
           </div>
           </div>
+          </a>
       `;
       }
     })
@@ -79,5 +82,11 @@ function redirectCards(e) {
 }
 
 getGames(URLsearch);
+
+
+
+
+
+
 
 

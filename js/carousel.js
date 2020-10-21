@@ -100,6 +100,7 @@ function onClickEventPrev(e){
         if (game.publicado === true) {
            const cardContainer = document.createElement('div'); 
            cardContainer.innerHTML = `
+           <a href="detail2.html#${game.id}">
            <div id="${game.id}" class="card text-white mb-3 ml-3 mr-3" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
            <div class="row no-gutters ">
              <div class="col-md-4">
@@ -113,6 +114,7 @@ function onClickEventPrev(e){
              </div>
            </div>
          </div>
+         </a>
          `
          cardContainer.className = 'row justify-content-center col-xs-6 col-sm-6 col-md-6 col-lg-12';
          cardsContainer.appendChild(cardContainer);
@@ -129,6 +131,7 @@ function onClickEventPrev(e){
           if (game.publicado === true) {
             const cardContainer = document.createElement('div'); 
             cardContainer.innerHTML = `
+            <a href="detail2.html#${game.id}">
             <div id="${game.id}" class="card text-white mb-3 ml-3 mr-3" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
             <div class="row no-gutters ">
               <div class="col-md-4">
@@ -142,6 +145,7 @@ function onClickEventPrev(e){
               </div>
             </div>
           </div>
+          </a>
           `
           cardContainer.className = 'row justify-content-center col-xs-6 col-sm-6 col-md-6 col-lg-12';
           cardsContainer.appendChild(cardContainer);
@@ -157,6 +161,7 @@ function onClickEventPrev(e){
           if (game.publicado === true) {
             const cardContainer = document.createElement('div'); 
             cardContainer.innerHTML = `
+            <a href="detail2.html#${game.id}">
             <div id="${game.id}" class="card text-white mb-3 ml-3 mr-3" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
             <div class="row no-gutters ">
               <div class="col-md-4">
@@ -170,6 +175,7 @@ function onClickEventPrev(e){
               </div>
             </div>
           </div>
+          </a>
           `
           cardContainer.className = 'row justify-content-center col-xs-6 col-sm-6 col-md-6 col-lg-12';
           cardsContainer.appendChild(cardContainer);
@@ -186,6 +192,7 @@ function onClickEventPrev(e){
           if (game.publicado === true) {
             const cardContainer = document.createElement('div'); 
             cardContainer.innerHTML = `
+            <a href="detail2.html#${game.id}">
             <div id="${game.id}" class="card text-white mb-3 ml-3 mr-3" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
             <div class="row no-gutters ">
               <div class="col-md-4">
@@ -199,6 +206,7 @@ function onClickEventPrev(e){
               </div>
             </div>
           </div>
+          </a>
           `
           cardContainer.className = 'row justify-content-center col-xs-6 col-sm-6 col-md-6 col-lg-12';
           cardsContainer.appendChild(cardContainer);
@@ -209,8 +217,8 @@ function onClickEventPrev(e){
       });
      }
  
-function redirectCards(e) {
-    window.location.href="detail.html";
+ function redirectCards(e) {
+    window.location.href= "detail.html";
 }
 
 

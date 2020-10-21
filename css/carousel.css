@@ -7,13 +7,24 @@
     margin:auto;
     position:relative;
     top:20px;
-    padding: 10px 10px;
+    padding: 8px 8px;
     background-color:#006494;
     margin-bottom:20px;
     border-radius:3px;
     align-items: right;
     color:#f8f9fa;
 
+}
+
+.busquedaInput{
+    border-radius:3px;
+    border:none;
+    background-color:none;
+    padding:3px;
+}
+
+.searchmodal{
+    margin: 150px 50px;
 }
 
 .withinSearchInput{
@@ -32,6 +43,10 @@
 
 .inputSearch{
     border-radius:3px;
+}
+
+.searchLabel{
+    font-size:10px;
 }
 .resultContainer{
     display:flex;

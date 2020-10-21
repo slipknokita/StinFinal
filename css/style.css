@@ -13,9 +13,10 @@ body{
 .bg-000001{
     background-color: #000;
 }
-.background-prototype{
+
+/*.background-prototype{
     position: relative;
-}
+}*/
 
 .b-landing{
     background: url(../img/background1.png);

@@ -1,22 +1,22 @@
-   const todoList = document.getElementById('table');
-   const form = document.getElementById('form');
-   const editFormContainer = document.getElementById(`editFormContainer`)
-   
- 
+const todoList = document.getElementById('table');
+const form = document.getElementById('form');
+const editFormContainer = document.getElementById(`editFormContainer`);
+const deleFormContainer = document.getElementById(`deleFormContainer`);
+
+
 
     form.addEventListener('submit', e => {
       e.preventDefault();
       const namegame = document.getElementById('name').value;
       const stylegame = document.querySelector('input[name="style"]:checked').value;
       const categorygame = document.getElementById('category').value;
+      const imagegame = document.getElementById('imagen').value;
       const publishedgame= document.querySelector('input[name="published"]:checked').value =='true'
-      const data = { name: namegame, style: stylegame, category: categorygame,publicado:publishedgame,destacado:'no'};
+      const data = { name: namegame, style: stylegame, category: categorygame,imgSource:imagegame,publicado:publishedgame,destacado:'no'};
       postNewTodo(data);
-      
     })
 
    
-
     async function getTodos() {
       const url = 'http://localhost:3000/Games';
       const response = await fetch(url);
@@ -44,27 +44,32 @@
         ${game.publicado}
         </td>
         <td>
-        ${game.destacado}
-        </td>
-        <td>
         <img src="${game.imgSource}" class="card-img" alt="...">
         </td>
         <td class="">
-        <button id= ${game.id} type="button" class="btn btndelete deleteButton text-white"><span class="fas fa-trash-alt"></span>Borrar</button>
+        <button id= ${game.id} type="button" class="btn btndelete deleteButton text-white" data-toggle="modal" data-target="#modalForm1"><span class="fas fa-trash-alt"></span>Borrar</button>
         </td>
         <td class="">
         <button id= ${game.id} type="button" class="btn  btnedit editButton text-white" data-toggle="modal" data-target="#modalForm"><span class="fas fa-edit"></span>Editar</button>
         </td>
-        <td class="">
-        <button id= ${game.id} type="button" class="btndestacado btn text-white"><span class="fas fa-star"></span>Destacado</button>
+        <td id="${game.destacado}">
+        <button id= ${game.id} type="button" class="btndestacado btn text-white"><span id="${game.destacado}"  class="estrella"></span>Destacado</button>
         </td>
       `
         todoList.appendChild(row);
       })
+      let starOnOff = document.querySelectorAll(".estrella");
+      console.log(starOnOff)
+      for (i=0; i<starOnOff.length;i++){
+        if (starOnOff[i].id === "si"){
+          starOnOff[i].classList.add("fas","fa-star")
+        }else {
+          starOnOff[i].classList.add("far","fa-star")
+        }
+      }
     }
-    
       
-       async function postNewTodo({ name,style,category,publicado,destacado}) {
+    async function postNewTodo({ name,style,category,imgSource,publicado,destacado}) {
        const url = 'http://localhost:3000/Games';
        const response = await fetch(url, {
         method: 'POST',
@@ -72,38 +77,80 @@
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
-       
-        body: JSON.stringify({ name,style,category,publicado,destacado})
+        body: JSON.stringify({ name,style,category,imgSource,publicado,destacado})
       })
       const newData = await response.json();
       console.log(newData);
       debugger
     }
     
+    
+    getTodos().then(Games => buildTodo(Games));
+ 
+
+
+
     async function deleteVideoGame (id) {
+      console.log(id);
       const newURL = `http://localhost:3000/Games/${id}`;
       const response = await fetch(newURL, {
         method: 'DELETE'
       })
     }
-
-
-    getTodos().then(Games => buildTodo(Games));
     
+     
     todoList.addEventListener(`click`, e => {
       if(e.target.classList.contains(`deleteButton`)) {
+        const id = e.target.id;
+        getgamesbyId(id).then(game => deleteForm(game))
+      }
+    })
+
+    function deleteForm(game) {
+      const form = document.createElement('form');
+      form.id = 'deleForm'
+      form.classList.add('deletForm')
+      form.innerHTML = `
+      <div class="modal fade" id="modalForm1" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel1">Borrar Juego</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body commontexts">
+          <h4 id:"modaltextodelete"> ¿Esta Seguro de eliminar este juego?</h5>
+          </div>
+         <div class="modal-footer">
+         <button  class="btn btn-success aceptar putContent" id= ${game.id} >Si</button>
+         <button  type="button" class="btn btn-success putContent" data-dismiss="modal">No</button>
+         </div>
+        </div>
+      </div>
+    </div>
+      `
+      deleFormContainer.appendChild(form);
+    }
+
+
+    
+    deleFormContainer.addEventListener(`click`, e => {
+      if(e.target.classList.contains(`aceptar`)) {
         const id = e.target.id;
         
         deleteVideoGame(id);
       }
     })
+    //
     
     todoList.addEventListener(`click`,e => {
       if(e.target.classList.contains(`editButton`)) {
         const id = e.target.id;
         getgamesbyId(id).then(game => createForm(game))
     }
-    } )
+    })
 
     async function getgamesbyId(id) {
       const url = `http://localhost:3000/Games/${id}`;
@@ -131,22 +178,22 @@
           <div>
           <label for="todoInput">Id:</label>
           <br>
-          <input value="${values.id}" type="text" placeholder="Ingrese Id" id="idvalue" />
+          <input value="${values.id}" type="text" placeholder="Ingrese Id" id="idvalue" required/>
         </div>
         <div>
           <label for="todoInput">Nombre:</label>
           <br>
-          <input value="${values.name}" type="text" placeholder="Ingrese Nombre" id="namevalue" />
+          <input value="${values.name}" type="text" placeholder="Ingrese Nombre" id="namevalue" required/>
         </div>
         <div>
           <label for="todoInput">Categoria:</label>
           <br>
-          <input value="${values.category}" type="text" placeholder="Ingrese Categoria" id="categoryvalue" />
+          <input value="${values.category}" type="text" placeholder="Ingrese Categoria" id="categoryvalue" required/>
         </div>
         <div>
           <label for="todoInput">Estilo:</label>
           <br>
-          <input value="${values.style}" type="text" placeholder="Añadir tarea" id="stylevalue" />
+          <input value="${values.style}" type="text" placeholder="Añadir tarea" id="stylevalue" required/>
         </div>
         <div>
           <label for="todoInput">Publicado:</label>
@@ -173,7 +220,6 @@
       `
       editFormContainer.appendChild(form);
     }
-
 
 
     async function editTodo(id, inputData) {
@@ -227,6 +273,7 @@ function loginOn (){
           `
       }
 }
+
 loginOn();
 function removeLS(){
   localStorage.removeItem("userActive");
@@ -257,4 +304,3 @@ async function destacarVideogame (id, dataDestacado) {
   return data;
 }
 
-   
