@@ -110,6 +110,7 @@ function onClickEventPrev(e){
                <div class="card-body">
                  <h5 class="card-title">${game.name}</h5>
                  <p class="card-text">Estilo de juego: ${game.style}</p>
+                 <span id="${game.destacado}" class="estrella starSize"></span>
                </div>
              </div>
            </div>
@@ -118,12 +119,12 @@ function onClickEventPrev(e){
          `
          cardContainer.className = 'row justify-content-center col-xs-6 col-sm-6 col-md-6 col-lg-12';
          cardsContainer.appendChild(cardContainer);
-         cardContainer.addEventListener('click',redirectCards)
-        } else {
-          console.log('This is false');
-      }
-      });
+       } else {
+         console.log('This is false');
      }
+     });
+     starOnOff();
+    }
 
      const createFantasyCards = games => {
       cardsContainer.scrollIntoView(true)
@@ -141,6 +142,7 @@ function onClickEventPrev(e){
                 <div class="card-body">
                   <h5 class="card-title">${game.name}</h5>
                   <p class="card-text">Estilo de juego: ${game.style}</p>
+                  <span id="${game.destacado}" class="estrella starSize"></span>
                 </div>
               </div>
             </div>
@@ -149,11 +151,12 @@ function onClickEventPrev(e){
           `
           cardContainer.className = 'row justify-content-center col-xs-6 col-sm-6 col-md-6 col-lg-12';
           cardsContainer.appendChild(cardContainer);
-          cardContainer.addEventListener('click',redirectCards)
+          
         } else {
           console.log('This is false');
       }
       });
+      starOnOff()
      }
       const createShooterCards = games => {
         cardsContainer.scrollIntoView(true)
@@ -171,6 +174,7 @@ function onClickEventPrev(e){
                 <div class="card-body">
                   <h5 class="card-title">${game.name}</h5>
                   <p class="card-text">Estilo de juego: ${game.style}</p>
+                  <span id="${game.destacado}" class="estrella starSize"></span>
                 </div>
               </div>
             </div>
@@ -179,11 +183,12 @@ function onClickEventPrev(e){
           `
           cardContainer.className = 'row justify-content-center col-xs-6 col-sm-6 col-md-6 col-lg-12';
           cardsContainer.appendChild(cardContainer);
-          cardContainer.addEventListener('click',redirectCards)
+          
         } else {
           console.log('This is false');
       }
       });
+      starOnOff()
      }
 
       const createActionCards = games => {
@@ -202,6 +207,7 @@ function onClickEventPrev(e){
                 <div class="card-body">
                   <h5 class="card-title">${game.name}</h5>
                   <p class="card-text">Estilo de juego: ${game.style}</p>
+                  <span id="${game.destacado}" class="estrella starSize"></span>
                 </div>
               </div>
             </div>
@@ -210,17 +216,25 @@ function onClickEventPrev(e){
           `
           cardContainer.className = 'row justify-content-center col-xs-6 col-sm-6 col-md-6 col-lg-12';
           cardsContainer.appendChild(cardContainer);
-          cardContainer.addEventListener('click',redirectCards)
+          
         } else {
           console.log('This is false');
       }
       });
+      starOnOff()
      }
- 
- function redirectCards(e) {
-    window.location.href= "detail2.html";
-}
 
+     function starOnOff(){
+     let starOnOff = document.querySelectorAll(".estrella");
+     console.log(starOnOff)
+     for (i=0; i<starOnOff.length;i++){
+       if (starOnOff[i].id === "si"){
+         starOnOff[i].classList.add("fas","fa-star")
+       }else {
+         starOnOff[i].classList.add("far","fa-star")
+       }
+     }
+    }
 
   const getGameByCategory = async (category) => {
     const url = `http://localhost:3000/Games?category=${category}`;
