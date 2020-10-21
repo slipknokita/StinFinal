@@ -111,7 +111,7 @@ const deleFormContainer = document.getElementById(`deleFormContainer`);
       form.id = 'deleForm'
       form.classList.add('deletForm')
       form.innerHTML = `
-      <div class="modal fade" id="modalForm1" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+      <div class="modal fade positionModal" id="modalForm1" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
@@ -124,8 +124,8 @@ const deleFormContainer = document.getElementById(`deleFormContainer`);
           <h4 id:"modaltextodelete"> ¿Esta Seguro de eliminar este juego?</h5>
           </div>
          <div class="modal-footer">
-         <button  class="btn btn-success aceptar putContent" id= ${game.id} >Si</button>
-         <button  type="button" class="btn btn-success putContent" data-dismiss="modal">No</button>
+         <button  class="btn btn-danger aceptar putContent text-white" id= ${game.id} >Si</button>
+         <button  type="button" class="btn btn-dark text-white putContent" data-dismiss="modal">No</button>
          </div>
         </div>
       </div>
@@ -164,7 +164,7 @@ const deleFormContainer = document.getElementById(`deleFormContainer`);
       form.id = 'editForm'
       form.classList.add('editableForm')
       form.innerHTML = `
-      <div class="modal fade" id="modalForm" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal fade" id="modalForm" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
@@ -173,8 +173,7 @@ const deleFormContainer = document.getElementById(`deleFormContainer`);
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-          
+          <div class="modal-body">         
           <div>
           <label for="todoInput">Id:</label>
           <br>
@@ -211,7 +210,7 @@ const deleFormContainer = document.getElementById(`deleFormContainer`);
       <br>
       <input value="${values.destacado}" type="text" placeholder="Añadir tarea" id="destacadovalue" />
     </div>
-      <button class="btn btn-success putContent" id=${values.id} type="submit">Editar</button>
+      <button class="btn btn-success putContent text-light" id=${values.id} type="submit">Editar</button>
           
           </div>
         </div>

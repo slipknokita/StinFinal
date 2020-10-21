@@ -150,9 +150,7 @@ justify-content: space-between;
 
 .newCards, .newCardsResults {
     cursor:pointer;
-    text-decoration: none;
 }
-
 
 .thumbnail:hover {
     position:relative;

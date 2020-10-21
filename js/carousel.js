@@ -141,7 +141,7 @@ function onClickEventPrev(e){
            const cardContainer = document.createElement('div'); 
            cardContainer.innerHTML = `
            <a href="detail2.html#${game.id}">
-           <div id="${game.id}" class="card text-white mb-3 ml-3 mr-3" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
+           <div id="${game.id}" class="card text-white mb-3 mx-auto" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
            <div class="row no-gutters ">
              <div class="col-md-4">
                <img src="${game.imgSource}" class="card-img" alt="...">
@@ -158,7 +158,7 @@ function onClickEventPrev(e){
          `
          cardContainer.className = 'row justify-content-center col-xs-6 col-sm-6 col-md-6 col-lg-12';
          cardsContainer.appendChild(cardContainer);
-         /*cardContainer.addEventListener('click',redirectCards)*/
+         cardContainer.addEventListener('click',redirectCards)
         } else {
           console.log('This is false');
       }
@@ -172,7 +172,7 @@ function onClickEventPrev(e){
             const cardContainer = document.createElement('div'); 
             cardContainer.innerHTML = `
             <a href="detail2.html#${game.id}">
-            <div id="${game.id}" class="card text-white mb-3 ml-3 mr-3" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
+            <div id="${game.id}" class="card text-white mb-3 mx-auto" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
             <div class="row no-gutters ">
               <div class="col-md-4">
                 <img src="${game.imgSource}" class="card-img" alt="...">
@@ -189,7 +189,7 @@ function onClickEventPrev(e){
           `
           cardContainer.className = 'row justify-content-center col-xs-6 col-sm-6 col-md-6 col-lg-12';
           cardsContainer.appendChild(cardContainer);
-          /*cardContainer.addEventListener('click',redirectCards)*/
+          cardContainer.addEventListener('click',redirectCards)
         } else {
           console.log('This is false');
       }
@@ -202,7 +202,7 @@ function onClickEventPrev(e){
             const cardContainer = document.createElement('div'); 
             cardContainer.innerHTML = `
             <a href="detail2.html#${game.id}">
-            <div id="${game.id}" class="card text-white mb-3 ml-3 mr-3" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
+            <div id="${game.id}" class="card text-white mb-3 mx-auto" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
             <div class="row no-gutters ">
               <div class="col-md-4">
                 <img src="${game.imgSource}" class="card-img" alt="...">
@@ -219,7 +219,7 @@ function onClickEventPrev(e){
           `
           cardContainer.className = 'row justify-content-center col-xs-6 col-sm-6 col-md-6 col-lg-12';
           cardsContainer.appendChild(cardContainer);
-          /*cardContainer.addEventListener('click',redirectCards)*/
+          cardContainer.addEventListener('click',redirectCards)
         } else {
           console.log('This is false');
       }
@@ -233,7 +233,7 @@ function onClickEventPrev(e){
             const cardContainer = document.createElement('div'); 
             cardContainer.innerHTML = `
             <a href="detail2.html#${game.id}">
-            <div id="${game.id}" class="card text-white mb-3 ml-3 mr-3" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
+            <div id="${game.id}" class="card text-white mb-3 mx-auto" style="background-color: rgba(0,0,0,0.4); max-width: 800px;">
             <div class="row no-gutters ">
               <div class="col-md-4">
                 <img src="${game.imgSource}" class="card-img" alt="...">
@@ -250,14 +250,17 @@ function onClickEventPrev(e){
           `
           cardContainer.className = 'row justify-content-center col-xs-6 col-sm-6 col-md-6 col-lg-12';
           cardsContainer.appendChild(cardContainer);
-         /* cardContainer.addEventListener('click',redirectCards)*/
+          cardContainer.addEventListener('click',redirectCards)
         } else {
           console.log('This is false');
       }
       });
      }
  
- 
+ function redirectCards(e) {
+    window.location.href= "detail2.html";
+}
+
 
   const getGameByCategory = async (category) => {
     const url = `http://localhost:3000/Games?category=${category}`;
@@ -293,8 +296,8 @@ function loginOn (){
             <a class="nav-link dropdown-toggle active text-right" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Bienvenido ${localStorage.getItem("userActive")}</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="admin.html">Panel de Administracion</a>
-              <button class="dropdown-item" onclick="removeLS()">Salir</button>
+              <a class="dropdown-item text-center" href="admin.html">Panel de Administracion</a>
+              <button class="dropdown-item text-center" onclick="removeLS()">Salir</button>
             </div>
             `
     } else if (localStorage.getItem("userActive") != null){

@@ -13,19 +13,18 @@
       <script src="https://kit.fontawesome.com/4e9df753cf.js" crossorigin="anonymous"></script>
 </head>
 <body class="azulOscuro" id="body">
-
-     <!-- NAVBAR  -->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-000000 pb-0">
-      <div class="container">
-        <div>
-          <a class="col-1 m-0" href="landing.html">
-            <img style="width: 70px;" src="img/logoninja.png" alt="logo">
+<!-- NAVBAR  -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-000000 pb-0">
+    <div class="container">
+      <div>
+        <a class="col-1 m-0" href="landing.html">
+          <img style="width: 70px;" src="img/logoninja.png" alt="logo">
         </a>
       </div>
       <div>
         <h2 class="text-white">STIN</h2>
       </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
@@ -36,7 +35,7 @@
             <li class="nav-item">
               <a class="nav-link text-right" href="home.html" >Biblioteca</a>             
             </li>
-            <li class="nav-item dropdown" id="responsiveUser">
+            <li class="nav-item dropdown d-flex justify-content-end" id="responsiveUser">
               <a class="nav-link dropdown-toggle text-right" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Cuenta
               </a>
@@ -53,79 +52,76 @@
       </div>
   </nav>
         
-         <!-- Titulo -->  
+  <!-- Titulo -->  
+
         <div class="container pt-5 py-0">
             <h1>Panel de Administracion</h1>
         </div>
-        <a href="#"><button class="btn btnSuccess text-light mx-5 float-right" data-toggle="modal" data-target="#modal"><span class="fas fa-gamepad"></span> Agregar Juego</button></a>
-         
+        <div class="container text-right">
+          <button class="btn btnSuccess text-light" data-toggle="modal" data-target="#modal"><span class="fas fa-gamepad"></span>Agregar Juego</button>
+        </div>
         <div id="editFormContainer" class="formcontainer"></div>
         <div id="deleFormContainer" class="formcontainer"></div>
-    
-       <!-- Tabla -->    
-       <div class="container d-flex p-5 mt-0"> 
-            <div class="row">
-                
-        <div class="col-xs-12">
-                    <h2 class="p-3">Listado de juegos</h2>
 
+       <!-- Tabla -->    
+      <div class="container d-flex py-5 table-responsive"> 
+          <div class="row">
+                
+            <div class="col-xs-12">
+                    <h2 class="p-3">Listado de juegos</h2>
                     <table id="table" class="table table-hover table-responsive">
                         <thead>
                             <tr>
-                                <th >Codigo</th>
-                                <th >Nombre</th>
-                                <th >Style</th>
-                                <th >Categoria</th>
-                                <th >Publicado</th>
-                                <th >Image</th>
-                                 
-                            </tr>
-                           
+                              <th>Codigo</th>
+                                <th>Nombre</th>
+                                <th>Style</th>
+                                <th>Categoria</th>
+                                <th>Publicado</th>
+                                <th>Image</th>   
+                              </tr>                           
                         </thead>
                         <tbody></tbody>
                     </table> 
-                </div>
+                  </div>
             </div>
-        </div>
-    </div>
+          </div>
+      </div>
 
     <!-- Modal agregar juego-->
     <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog ">
-        <div class="modal-content azulOscuro">
-            <div class="modal-header">
-            <h1 class="modal-title pt-0 px-5">Agregar Juegos</h1>
-            </div>
+        <div class="modal-dialog text-center">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title pt-0">Agregar Juegos</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
             <form action="" id="form">
-            <div class="form-group pt-0 px-5">
-                
-                <label for="name" class="mt-2 ">Nombre</label><br>
-                <input type="text" id="name" placeholder="Nombre" class="border p-1 rounded" required><br>
-                   <p>Seleccione un estilo:</p>
-                <input type="radio"  name="style" value=" singleplayer"> singleplayer <br>
-                <input type="radio"  name="style" value=" multiplayer"> multiplayer<br>
-                <label for="categoJuegos" class="mt-4">Categoria</label><br>
+            <div class="form-group">
+              <label for="name" class="mt-2">Nombre</label><br>
+                <input type="text" id="name" placeholder="Nombre" class="border p-1 rounded" required>
+                <p>Seleccione un estilo:</p>
+                <input type="radio" name="style" value="singleplayer"> singleplayer <br>
+                <input type="radio" name="style" value="multiplayer"> multiplayer<br>
+                <label for="categoJuegos" class="mt-3">Categoria</label><br>
                 <input type="text" id="category" placeholder="Categoria" class="border p-1 rounded" required><br>    
-                <label for="imagenJuegos" class="mt-4">Imagen</label><br>
+                <label for="imagenJuegos" class="mt-3">Imagen</label><br>
                 <input type="text" id="imagen" placeholder="link imagen" class="border p-1 rounded" required><br>
-                
                 <p>Publicar:</p>
                 <input type="radio"  name="published" value="true"> Si<br>
-                <input type="radio" name="published" value="false"> No <br>
-                
-             <div class="d-flex justify-content-center">
-                    <button type="submit" class="btnSuccess mt-2 text-light" id="submit">Agregar</button>
-                    </div>   
+                <input type="radio" name="published" value="false"> No <br>                
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btnSuccess mt-2 text-light" id="submit">Agregar</button>
+                  </div>   
                 </div>
-            </form>
+              </form>
             </div>
-        </div>      
-        </div>  
-
-        
-
+          </div>      
+        </div>    
+<!--Footer-->
         <footer>
-            <div class="footer py-3">
+          <div class="footer py-3">
               <div class="container">
                 <div class="row text-center">
                   <div class="text-center col-xl-3 col-lg-3 col-12-md col-12-sm">
@@ -136,28 +132,29 @@
                     <a href="https://www.facebook.com"><i class="fab fa-facebook-square fa-4x mx-2"></i></a>
                     <a href="https://www.instagram.com"><i class="fab fa-instagram fa-4x"></i></a>
                     <a href="https://www.twitter.com"><i class="fab fa-twitter-square fa-4x mx-2"></i></a>
-                </div>
-                <div class="copyright col-xl-3 col-lg-3 col-12-md col-12-sm d-flex align-items-center justify-content-center py-2 mb-2 border-top border-bottom">
+                  </div>
+                  <div class="copyright col-xl-3 col-lg-3 col-12-md col-12-sm d-flex align-items-center justify-content-center py-2 mb-2 border-top border-bottom">
                     <h5 class="text-white">Stin Gaming 2020 - Todos los Derechos Reservados</h5>
-                </div>
+                  </div>
                 <div class="links col-xl-3 col-lg-3 col-12-md col-12-sm d-flex align-self-center">
-                    <a class="a-footer" href="aboutUs.html"><h5>Acerca de nosotros</h5></a>
+                  <a class="a-footer" href="aboutUs.html"><h5>Acerca de nosotros</h5></a>
                     <a class="a-footer" href="https://mail.google.com/mail/?view=cm&fs=1&to=stin@gmail.com&su=Consulta&body=Escribenos en que te podemos ayudar. No hacemos reembolso"
-              target="_blank"><h5>Contacto: stin@gmail.com</h5></a>
+                    target="_blank"><h5>Contacto: stin@gmail.com</h5></a>
                     <a class="a-footer" href="error404.html"><h5>Legales</h5></a>
-                </div>
                 </div>
               </div>
             </div>
-          </footer>
-
-       <!-- /* <script src="js/admin.js"></script> -->
-       <script src="js/admin2.js"></script>
+          </div>
+        </footer>
+        
+        <!-- /* <script src="js/admin.js"></script> -->
+        <script src="js/admin2.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    </body>
-    </html>             
+      </body>
+      </html>             
+      
                 
            
-                
+      

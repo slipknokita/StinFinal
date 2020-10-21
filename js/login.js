@@ -32,15 +32,15 @@ function redirec(){
     body.innerHTML = `
         <html>
         <head>
-            <meta http-equiv="Refresh" content="3;url=home.html">
+        <meta http-equiv="Refresh" content="3;url=home.html">
         </head>
         <body class="azulOscuro d-flex justify-content-center">
-        <div class="container" style="margin-top: 20%;">
+        <div class="d-inline-flex" style="margin-top: 20%;">
             <main>
                 <h1 class="text-center">Bienvenido</h1>
                 <p class="text-center">Seras redireccionado en instantes a la página principal</p>
-                </main>
-            </div>
+            </main>
+        </div>
         </body>
         </html>
         `
@@ -60,7 +60,7 @@ function loginOn (){
         loginActive.innerHTML=`
           <a class="nav-link dropdown-toggle active text-right" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Bienvenido ${localStorage.getItem("userActive")}</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <div class="dropdown-menu  text-right" aria-labelledby="navbarDropdownMenuLink">
             <button class="dropdown-item" onclick="removeLS()">Salir</button>
           </div>
           `
