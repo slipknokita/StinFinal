@@ -145,7 +145,7 @@ function buildTodo(game) {
           <div class="container my-0">
             <div class="row text-center">
               <div class="text-center col-xl-3 col-lg-3 col-12-md col-12-sm">
-                <a href="index.html"><img class="p-3" src="img/logoninja.png" alt="Logo" width="70%"></a>
+                <a href="home.html"><img class="p-3" src="img/logoninja.png" alt="Logo" width="70%"></a>
               </div>
               <div class="socials col-xl-3 col-lg-3 col-12-md col-12-sm mb-3">
                 <h2 class="text-white">Redes Sociales</h2>

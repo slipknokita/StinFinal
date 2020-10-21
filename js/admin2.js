@@ -81,7 +81,6 @@ const deleFormContainer = document.getElementById(`deleFormContainer`);
       })
       const newData = await response.json();
       console.log(newData);
-      debugger
     }
     
     

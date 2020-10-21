@@ -21,6 +21,7 @@ a{
     cursor: pointer;
 }
 a:hover{
+    text-decoration: none;
     color: whitesmoke;
 }
 .a-footer{
